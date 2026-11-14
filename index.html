@@ -38,11 +38,6 @@
     <div class="masthead__inner">
       <a class="site-brand is-placeholder" href="#home" data-field="brand">姓名待补充</a>
 
-      <button class="nav-toggle" id="nav-toggle" type="button"
-              aria-label="展开导航菜单" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle__bars" aria-hidden="true"></span>
-      </button>
-
       <nav class="site-nav" id="site-nav" aria-label="主导航">
         <ul class="site-nav__list">
           <li><a class="nav-link is-active" href="#home">首页</a></li>
@@ -54,6 +49,24 @@
           <li><a class="nav-link" href="#contact">联系</a></li>
         </ul>
       </nav>
+
+      <!-- 参考站 greedy-nav 的深灰方形按钮：展开完整导航 -->
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="展开导航菜单" aria-expanded="false" aria-controls="nav-overflow">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-overflow" id="nav-overflow" hidden>
+        <ul>
+          <li><a href="#home">首页</a></li>
+          <li><a href="#about">关于我</a></li>
+          <li><a href="#experience">经历</a></li>
+          <li><a href="#projects">项目</a></li>
+          <li><a href="#achievements">成果</a></li>
+          <li><a href="#skills">技能</a></li>
+          <li><a href="#contact">联系</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -130,6 +143,8 @@
             <dd class="is-placeholder" data-field="heroStatus">当前状态待补充</dd>
           </div>
         </dl>
+
+        <p class="hero-contact is-placeholder" data-field="heroContact">联系邮箱待补充</p>
 
         <p class="section__actions">
           <a class="button" href="#contact">联系我</a>

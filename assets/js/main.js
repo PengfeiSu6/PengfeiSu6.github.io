@@ -210,12 +210,13 @@
      -------------------------------------------------------------------------- */
   function initNavigation() {
     var toggle = document.getElementById("nav-toggle");
-    var nav = document.getElementById("site-nav");
+    var overflow = document.getElementById("nav-overflow");
     var links = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
-    if (!toggle || !nav) return;
+    if (!toggle) return;
 
+    /* 桌面与窄屏共用同一个下拉面板：桌面水平菜单常显，窄屏由面板提供导航 */
     function setOpen(open) {
-      nav.classList.toggle("is-open", open);
+      if (overflow) overflow.hidden = !open;
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "收起导航菜单" : "展开导航菜单");
     }
@@ -227,8 +228,13 @@
     links.forEach(function (link) {
       link.addEventListener("click", function () { setOpen(false); });
     });
+    if (overflow) {
+      overflow.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () { setOpen(false); });
+      });
+    }
     document.addEventListener("click", function (event) {
-      if (!nav.contains(event.target) && !toggle.contains(event.target)) setOpen(false);
+      if (overflow && !overflow.contains(event.target) && !toggle.contains(event.target)) setOpen(false);
     });
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") setOpen(false);
@@ -300,6 +306,13 @@
       description.setAttribute("content", isSkeleton
         ? "个人主页基础框架（骨架阶段）：结构与样式已就位，内容待由简历填充。"
         : (profile.name ? profile.name + " · 电气工程博士、博士后，研究工业负荷灵活性与低碳电力系统协同优化；含经历、项目、成果与联系方式。" : "个人主页"));
+    }
+    /* 骨架态的 OG 标签同样保持中性，避免预览视图携带真实信息 */
+    if (isSkeleton) {
+      var ogTitle = document.querySelector('meta[property="og:title"]');
+      var ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogTitle) ogTitle.setAttribute("content", "个人主页 · 基础框架（骨架阶段）");
+      if (ogDesc) ogDesc.setAttribute("content", "结构与样式已就位，内容待由简历填充。");
     }
     if (label) label.textContent = isSkeleton ? "骨架阶段" : "内容预览";
     if (footerMeta) {

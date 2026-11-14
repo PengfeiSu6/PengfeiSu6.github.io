@@ -53,10 +53,11 @@ window.SITE_PROFILE = {
      拿到照片后直接改成图片路径字符串即可，例如 "assets/images/avatar.jpg"。 */
   avatar: { initial: "苏" },
 
-  /* [未提供] 简历没有 GitHub / Google Scholar / ORCID / 个人主页链接。
-     该容器带 data-optional，填充态下自动隐藏。
-     需要时格式：[{ label: "GitHub", url: "https://..." }] */
-  links: [],
+  /* [原文] 邮箱。GitHub / Google Scholar / ORCID / 个人主页链接简历未提供，不列。
+     侧栏沿用参考站的小图标链接列表形式，此容器非空时自动显示。 */
+  links: [
+    { label: "Email", url: "mailto:aca_spf@163.com" }
+  ],
 
   /* ============================================================ 01 首页介绍 */
   /* [归纳] 仅使用简历中的身份、教育经历与项目关键词组织表述 */
@@ -68,6 +69,9 @@ window.SITE_PROFILE = {
 
   /* [原文] 当前任职状态 */
   heroStatus: "博士后 · 2025.09 至今",
+
+  /* [功能文案 + 原文] 对应参考站首屏的 Contact 行 */
+  heroContact: "Contact: aca_spf@163.com",
 
   /* ============================================================== 02 关于我 */
   /* [归纳] 全部事实来自简历「教育背景」「工作经历」「项目经历」「科研成果」 */
