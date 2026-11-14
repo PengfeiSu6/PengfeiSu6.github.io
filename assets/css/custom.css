@@ -1,0 +1,94 @@
+/* ==========================================================================
+   站点补充样式
+   --------------------------------------------------------------------------
+   加载顺序：assets/css/main.css（academicpages / Minimal Mistakes 原版）
+             -> assets/css/custom.css（本文件）
+
+   本文件只补充「原版主题没有、但内容排版需要」的少量规则，
+   不覆盖主题原有的 masthead / sidebar / archive / footer 布局与配色。
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   导航：与参考站截图一致，右上角深灰方形按钮始终可见
+   --------------------------------------------------------------------------
+   原版主题的 greedy-nav 会在宽屏把所有链接放下后给按钮加 .hidden。
+   这里仅覆盖按钮本身的显隐，不改动主题对溢出链接的收纳逻辑，
+   因此窄屏依旧由 main.min.js 把放不下的菜单项移入 .hidden-links。 */
+.greedy-nav > button.hidden {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* 窄屏时主题会把「真实的溢出项」移入下拉面板；
+   此时隐藏预置的克隆项，避免下拉里出现重复菜单。 */
+.greedy-nav .hidden-links:has(> li:not(.nav-clone)) > li.nav-clone {
+  display: none;
+}
+
+/* 论文、专利的编号列表（与参考站 publications 页内联样式保持一致） */
+ol.custom-counter {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: custom-counter;
+}
+
+ol.custom-counter li {
+  counter-increment: custom-counter;
+  margin-bottom: 1.1em;
+  position: relative;
+  padding-left: 2.2em;
+  line-height: 1.5;
+}
+
+ol.custom-counter li::before {
+  content: "[" counter(custom-counter) "]";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2em;
+  color: #7a8288;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 首页 News 列表：与参考站一致的圆点列表，仅收紧段落间距 */
+ul.news-list {
+  padding-left: 1.3em;
+}
+
+ul.news-list li {
+  margin-bottom: 0.9em;
+}
+
+ul.news-list li p {
+  margin-bottom: 0;
+}
+
+/* 通用条目列表 */
+ul.plain-list {
+  padding-left: 1.3em;
+}
+
+ul.plain-list li {
+  margin-bottom: 0.6em;
+}
+
+/* 条目的时间 / 身份等辅助信息 */
+.entry-meta {
+  color: #7a8288;
+  font-size: 0.9em;
+}
+
+/* 补充说明段落 */
+.page-note {
+  color: #7a8288;
+  font-size: 0.9em;
+}
+
+/* 项目条目之间的轻间隔 */
+.project-block {
+  margin-bottom: 1.8em;
+}
+
+.project-block h3 {
+  margin-bottom: 0.2em;
+}

@@ -1,355 +1,104 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-CN" class="no-js">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="苏鹏飞 · 电气工程博士、博士后，研究工业负荷灵活性与低碳电力系统协同优化；含经历、项目、成果与联系方式。">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="苏鹏飞 · 个人主页">
-  <meta property="og:description" content="电气工程博士、博士后；研究工业负荷灵活性与低碳电力系统协同优化。">
-  <title>苏鹏飞 · 个人主页</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8">
+<title>首页 - 苏鹏飞</title>
+<meta name="description" content="苏鹏飞，电气工程博士，大湾区大学与清华大学深圳研究院博士后站博士后。研究方向：工业负荷灵活性、炼钢流程优化排产、混合储能与需求响应、多能源系统协同。">
+<meta property="og:site_name" content="苏鹏飞">
+<meta property="og:title" content="首页 - 苏鹏飞">
+<meta property="og:description" content="苏鹏飞，电气工程博士，大湾区大学与清华大学深圳研究院博士后站博士后。研究方向：工业负荷灵活性、炼钢流程优化排产、混合储能与需求响应、多能源系统协同。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cleartype" content="on">
+<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';</script>
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/custom.css">
 </head>
-<!--
-  ============================================================================
-  个人主页 / 阶段二：已按简历填充
-  ============================================================================
-  参考：lelouchsola.github.io/ChenGe/ 的布局与视觉层级
-        （顶部水平导航 + 左侧 sticky 作者信息栏 + 右侧长内容区 + 时间线列表 + 页脚）
-        仅借鉴结构与层级，未使用其任何文案、图片或素材。
-
-  【内容约定】唯一内容数据源为 data/profile.js；本文件内的可见文案是骨架态占位。
-              SITE_CONFIG.skeletonMode = false 时由 main.js 替换占位。
-              简历未提供的字段带 data-optional，填充态自动隐藏，不会显示「待补充」，
-              也不会生成任何推断内容。
-  【分区顺序】首页介绍 / 关于我 / 经历 / 项目 / 成果与荣誉 / 技能 / 联系
-  【扩展方式】新增挂载点 -> 在 main.js 的 renderers 注册模板 -> 在 profile.js 填数据
-  ============================================================================
--->
-<body data-hints="on">
-
-  <a class="skip-link" href="#content">跳转到主要内容</a>
-
-  <!-- ======================================================================
-       顶部导航（sticky）
-       参考站点为多页面水平导航；此处转译为单页锚点导航，便于分区扩展。
-       ====================================================================== -->
-  <header class="masthead" id="site-header">
-    <div class="masthead__inner">
-      <a class="site-brand is-placeholder" href="#home" data-field="brand">姓名待补充</a>
-
-      <nav class="site-nav" id="site-nav" aria-label="主导航">
-        <ul class="site-nav__list">
-          <li><a class="nav-link is-active" href="#home">首页</a></li>
-          <li><a class="nav-link" href="#about">关于我</a></li>
-          <li><a class="nav-link" href="#experience">经历</a></li>
-          <li><a class="nav-link" href="#projects">项目</a></li>
-          <li><a class="nav-link" href="#achievements">成果</a></li>
-          <li><a class="nav-link" href="#skills">技能</a></li>
-          <li><a class="nav-link" href="#contact">联系</a></li>
+<body data-home="index.html">
+<!-- 结构：masthead（真实页面导航） + #main（sticky sidebar + archive） + page__footer
+     内容填充位置：下方 <div class="archive"> 内部；共享身份字段见 data/profile.js -->
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="index.html" data-field="name">苏鹏飞</a></li>
+          <li class="masthead__menu-item"><a href="publications/index.html">Publications</a></li>
+          <li class="masthead__menu-item"><a href="services/index.html">Services</a></li>
+          <li class="masthead__menu-item"><a href="research/index.html">Research</a></li>
+          <li class="masthead__menu-item"><a href="education/index.html">Education</a></li>
+          <li class="masthead__menu-item"><a href="awards/index.html">Awards</a></li>
+          <li class="masthead__menu-item"><a href="contact/index.html">Contact</a></li>
+        </ul>
+        <ul class="hidden-links hidden">
+          <li class="masthead__menu-item nav-clone"><a href="index.html" data-field="name">苏鹏飞</a></li>
+          <li class="masthead__menu-item nav-clone"><a href="publications/index.html">Publications</a></li>
+          <li class="masthead__menu-item nav-clone"><a href="services/index.html">Services</a></li>
+          <li class="masthead__menu-item nav-clone"><a href="research/index.html">Research</a></li>
+          <li class="masthead__menu-item nav-clone"><a href="education/index.html">Education</a></li>
+          <li class="masthead__menu-item nav-clone"><a href="awards/index.html">Awards</a></li>
+          <li class="masthead__menu-item nav-clone"><a href="contact/index.html">Contact</a></li>
         </ul>
       </nav>
-
-      <!-- 参考站 greedy-nav 的深灰方形按钮：展开完整导航 -->
-      <button class="nav-toggle" id="nav-toggle" type="button"
-              aria-label="展开导航菜单" aria-expanded="false" aria-controls="nav-overflow">
-        <span class="nav-toggle__bars" aria-hidden="true"></span>
-      </button>
-
-      <div class="nav-overflow" id="nav-overflow" hidden>
-        <ul>
-          <li><a href="#home">首页</a></li>
-          <li><a href="#about">关于我</a></li>
-          <li><a href="#experience">经历</a></li>
-          <li><a href="#projects">项目</a></li>
-          <li><a href="#achievements">成果</a></li>
-          <li><a href="#skills">技能</a></li>
-          <li><a href="#contact">联系</a></li>
-        </ul>
-      </div>
     </div>
-  </header>
-
-  <!-- 开发提示条：填充态默认收起为右下角小按钮，可随时切回带标记的骨架视图 -->
-  <div class="dev-banner" id="dev-banner" role="note">
-    <div class="dev-banner__text">
-      <strong id="dev-mode-label">骨架阶段</strong>
-      <span class="dev-note" data-note="skeleton">当前页面全部为语义化占位，共
-        <b class="pending-total">—</b> 处待补充。内容统一维护在
-        <code>data/profile.js</code>：把 <code>skeletonMode</code> 改为 <code>false</code> 即可启用已核实资料，
-        页面结构无需改动。</span>
-      <span class="dev-note" data-note="filled" hidden>已启用 <code>data/profile.js</code> 中的简历资料，
-        剩余 <b class="pending-total">—</b> 处待补充。简历未提供的位置会自动隐藏或保留占位，不会被编造。</span>
+  </div>
+</div>
+<div id="main" role="main">
+<div class="sidebar sticky">
+  <div itemscope itemtype="http://schema.org/Person">
+    <div class="author__avatar">
+      <!-- 简历未提供照片：蓝色椭圆占位头像；拿到照片后替换下方 img 的 src 即可 -->
+      <img src="assets/images/profile.svg" class="author__avatar" alt="苏鹏飞">
     </div>
-    <button class="dev-banner__button" id="toggle-hints" type="button" aria-pressed="true">隐藏填充标记</button>
+    <div class="author__content">
+      <h3 class="author__name" data-field="name">苏鹏飞</h3>
+      <p class="author__bio" data-field="bio">博士后，大湾区大学与清华大学深圳研究院博士后站</p>
+    </div>
+    <div class="author__urls-wrapper">
+      <button class="btn btn--inverse">Follow</button>
+      <ul class="author__urls social-icons">
+        <li><i class="fas fa-fw fa-map-marker" aria-hidden="true"></i> 大湾区大学</li>
+        <li><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> 电气工程博士</li>
+        <li><a href="mailto:aca_spf@163.com" data-href="emailHref"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+        <li><a href="contact/index.html"><i class="fas fa-fw fa-address-card" aria-hidden="true"></i> Contact</a></li>
+      </ul>
+    </div>
   </div>
-
-  <div class="layout">
-
-    <!-- ====================================================================
-         左侧固定信息栏（对应参考站点 .sidebar.sticky / author 区块）
-         ==================================================================== -->
-    <aside class="sidebar" aria-label="个人基本信息">
-      <div class="sidebar__sticky">
-        <div class="author">
-
-          <!-- 头像：未上传照片时由数据层生成姓名首字徽标，不使用外部素材 -->
-          <div class="author__avatar is-placeholder" data-field="avatar" role="img" aria-label="头像待补充">
-            <span>照片<br>待补充</span>
-          </div>
-
-          <div class="author__content">
-            <p class="author__name is-placeholder" data-field="name">姓名待补充</p>
-            <p class="author__role is-placeholder" data-field="role">当前身份待补充</p>
-            <p class="author__org is-placeholder" data-field="org">所在机构待补充</p>
-            <p class="author__location is-placeholder" data-field="location" data-optional>所在城市待补充</p>
-          </div>
-
-          <!-- 外部链接：简历未提供，填充态自动隐藏 -->
-          <ul class="author__links" data-list="links" data-optional aria-label="外部链接">
-            <li class="author__links-empty is-placeholder">外链待补充（个人主页 / 学术档案 / 代码仓库）</li>
-          </ul>
-
-          <p class="fill-note" data-hint-block>待简历填充：姓名、身份、机构、所在地、头像与外链</p>
-        </div>
-      </div>
-    </aside>
-
-    <!-- ====================================================================
-         右侧主内容区
-         ==================================================================== -->
-    <main class="content" id="content">
-
-      <!-- 01 首页介绍 ---------------------------------------------------- -->
-      <section class="section section--hero" id="home" data-section aria-labelledby="home-title">
-        <div class="section__head">
-          <p class="section__eyebrow">01 / 首页介绍</p>
-          <span class="section__status" data-section-status>待补充</span>
-        </div>
-        <h1 class="section__title section__title--hero is-placeholder" id="home-title" data-field="heroTitle">
-          欢迎语待补充
-        </h1>
-        <p class="section__lead is-placeholder" data-field="heroLead">
-          一句话个人定位待补充（对应简历：个人概况 / 研究方向）。
-        </p>
-
-        <dl class="hero-facts">
-          <div class="hero-facts__item">
-            <dt>研究方向</dt>
-            <dd class="is-placeholder" data-field="heroFocus">研究方向待补充</dd>
-          </div>
-          <div class="hero-facts__item">
-            <dt>当前状态</dt>
-            <dd class="is-placeholder" data-field="heroStatus">当前状态待补充</dd>
-          </div>
-        </dl>
-
-        <p class="hero-contact is-placeholder" data-field="heroContact">联系邮箱待补充</p>
-
-        <p class="section__actions">
-          <a class="button" href="#contact">联系我</a>
-          <a class="button button--ghost" href="#achievements">查看成果</a>
-        </p>
-
-        <p class="fill-note" data-hint-block>待简历填充：欢迎语、个人定位、研究方向、当前状态</p>
-      </section>
-
-      <hr class="divider">
-
-      <!-- 02 关于我 ------------------------------------------------------ -->
-      <section class="section" id="about" data-section aria-labelledby="about-title">
-        <div class="section__head">
-          <p class="section__eyebrow">02 / 关于我</p>
-          <span class="section__status" data-section-status>待补充</span>
-        </div>
-        <h2 class="section__title" id="about-title">关于我</h2>
-        <p class="section__body is-placeholder" data-field="aboutText">
-          个人简介待补充：建议包含研究背景、主要方向与近期关注的问题。
-        </p>
-
-        <dl class="fact-list">
-          <div class="fact-list__row">
-            <dt>教育背景</dt>
-            <dd class="is-placeholder" data-field="aboutEducation">教育背景待补充</dd>
-          </div>
-          <div class="fact-list__row">
-            <dt>工作经历</dt>
-            <dd class="is-placeholder" data-field="aboutWork">工作经历待补充</dd>
-          </div>
-          <div class="fact-list__row">
-            <dt>研究成果</dt>
-            <dd class="is-placeholder" data-field="aboutOutputs">研究成果概览待补充</dd>
-          </div>
-        </dl>
-
-        <p class="fill-note" data-hint-block>待简历填充：教育背景、工作经历、成果概览</p>
-      </section>
-
-      <hr class="divider">
-
-      <!-- 03 经历 -------------------------------------------------------- -->
-      <section class="section" id="experience" data-section aria-labelledby="experience-title">
-        <div class="section__head">
-          <p class="section__eyebrow">03 / 经历</p>
-          <span class="section__status" data-section-status>待补充</span>
-        </div>
-        <h2 class="section__title" id="experience-title">经历</h2>
-        <p class="section__intro">教育与工作经历，按时间倒序排列。</p>
-
-        <ol class="timeline" data-list="experience" aria-label="教育与工作经历列表">
-          <li class="timeline__item is-placeholder">
-            <span class="timeline__period">时间待补充</span>
-            <span class="timeline__role">经历条目待补充</span>
-            <span class="timeline__org">机构 / 说明待补充</span>
-          </li>
-          <li class="timeline__item is-placeholder">
-            <span class="timeline__period">时间待补充</span>
-            <span class="timeline__role">经历条目待补充</span>
-            <span class="timeline__org">机构 / 说明待补充</span>
-          </li>
-        </ol>
-
-        <p class="fill-note" data-hint-block>待简历填充：逐条经历（来源：简历「教育背景」「工作经历」）</p>
-      </section>
-
-      <hr class="divider">
-
-      <!-- 04 项目 -------------------------------------------------------- -->
-      <section class="section" id="projects" data-section aria-labelledby="projects-title">
-        <div class="section__head">
-          <p class="section__eyebrow">04 / 项目</p>
-          <span class="section__status" data-section-status>待补充</span>
-        </div>
-        <h2 class="section__title" id="projects-title">项目</h2>
-        <p class="section__intro">主持及参与的科研项目，含项目编号、承担角色与主要成果。</p>
-
-        <div class="card-grid" data-list="projects" aria-label="项目列表">
-          <article class="card is-placeholder">
-            <p class="card__period">周期待补充</p>
-            <h3 class="card__title">项目名称待补充</h3>
-            <p class="card__role">承担角色待补充</p>
-            <p class="card__summary">项目简述与成果待补充</p>
-          </article>
-          <article class="card is-placeholder">
-            <p class="card__period">周期待补充</p>
-            <h3 class="card__title">项目名称待补充</h3>
-            <p class="card__role">承担角色待补充</p>
-            <p class="card__summary">项目简述与成果待补充</p>
-          </article>
-        </div>
-
-        <p class="fill-note" data-hint-block>待简历填充：逐条项目（来源：简历「项目经历」）</p>
-      </section>
-
-      <hr class="divider">
-
-      <!-- 05 成果与荣誉 -------------------------------------------------- -->
-      <section class="section" id="achievements" data-section aria-labelledby="achievements-title">
-        <div class="section__head">
-          <p class="section__eyebrow">05 / 成果</p>
-          <span class="section__status" data-section-status>待补充</span>
-        </div>
-        <h2 class="section__title" id="achievements-title">成果与荣誉</h2>
-        <p class="section__intro">代表性学术论文、发明专利、荣誉奖项与学术兼职。</p>
-
-        <div class="achievement-block">
-          <h3 class="achievement-block__title"><span>01</span> 代表性学术论文</h3>
-          <ol class="publication-list" data-list="publications" aria-label="代表性论文列表">
-            <li class="publication is-placeholder">论文条目待补充（作者 / 题名 / 期刊 / 备注）</li>
-            <li class="publication is-placeholder">论文条目待补充（作者 / 题名 / 期刊 / 备注）</li>
-          </ol>
-        </div>
-
-        <div class="achievement-block">
-          <h3 class="achievement-block__title"><span>02</span> 发明专利</h3>
-          <ul class="compact-list" data-list="patents" aria-label="发明专利列表">
-            <li class="compact-list__item is-placeholder">专利条目待补充（名称 / 发明人 / 编号 / 状态）</li>
-            <li class="compact-list__item is-placeholder">专利条目待补充（名称 / 发明人 / 编号 / 状态）</li>
-          </ul>
-        </div>
-
-        <div class="achievement-block">
-          <h3 class="achievement-block__title"><span>03</span> 荣誉奖项</h3>
-          <ul class="compact-list compact-list--two" data-list="awards" aria-label="荣誉奖项列表">
-            <li class="compact-list__item is-placeholder">奖项待补充</li>
-            <li class="compact-list__item is-placeholder">奖项待补充</li>
-          </ul>
-        </div>
-
-        <div class="achievement-block">
-          <h3 class="achievement-block__title"><span>04</span> 学术兼职与服务</h3>
-          <ul class="compact-list" data-list="services" aria-label="学术兼职列表">
-            <li class="compact-list__item is-placeholder">学术兼职待补充</li>
-            <li class="compact-list__item is-placeholder">学术兼职待补充</li>
-          </ul>
-        </div>
-
-        <p class="fill-note" data-hint-block>待简历填充：论文、专利、奖项与学术兼职（来源：简历「科研成果」「荣誉奖项」「学术兼职」）</p>
-      </section>
-
-      <hr class="divider">
-
-      <!-- 06 技能 -------------------------------------------------------- -->
-      <section class="section" id="skills" data-section aria-labelledby="skills-title">
-        <div class="section__head">
-          <p class="section__eyebrow">06 / 技能</p>
-          <span class="section__status" data-section-status>待补充</span>
-        </div>
-        <h2 class="section__title" id="skills-title">研究与技能</h2>
-        <p class="section__intro">以下条目依据简历「项目经历」「科研成果」中的方法与技术关键词归纳。</p>
-
-        <div class="skill-groups" data-list="skills" aria-label="技能分组">
-          <div class="skill-group is-placeholder">
-            <h3 class="skill-group__title">技能分组名称待补充</h3>
-            <p class="skill-group__tags">技能条目待补充</p>
-          </div>
-          <div class="skill-group is-placeholder">
-            <h3 class="skill-group__title">技能分组名称待补充</h3>
-            <p class="skill-group__tags">技能条目待补充</p>
-          </div>
-        </div>
-
-        <p class="fill-note" data-hint-block>待简历填充：技能分组与条目（简历未单列技能清单，需本人确认）</p>
-      </section>
-
-      <hr class="divider">
-
-      <!-- 07 联系 -------------------------------------------------------- -->
-      <section class="section" id="contact" data-section aria-labelledby="contact-title">
-        <div class="section__head">
-          <p class="section__eyebrow">07 / 联系</p>
-          <span class="section__status" data-section-status>待补充</span>
-        </div>
-        <h2 class="section__title" id="contact-title">联系</h2>
-        <p class="section__body is-placeholder" data-field="contactIntro">
-          联系说明待补充。
-        </p>
-
-        <ul class="contact-list" data-list="contact" aria-label="联系方式列表">
-          <li class="contact-list__item is-placeholder">
-            <span class="contact-list__label">联系方式</span>
-            <span class="contact-list__value">内容待补充</span>
-          </li>
-          <li class="contact-list__item is-placeholder">
-            <span class="contact-list__label">联系方式</span>
-            <span class="contact-list__value">内容待补充</span>
-          </li>
-        </ul>
-
-        <p class="fill-note" data-hint-block>待简历填充：邮箱、电话等（来源：简历「联系方式」；是否公开由本人决定）</p>
-      </section>
-
-    </main>
-  </div>
-
-  <!-- 页脚置于 layout 之外，实现参考站的全宽灰底 -->
-  <footer class="page-footer">
-    <p>&copy; <span id="year">2026</span> <span class="is-placeholder" data-field="footerName">姓名待补充</span> · 个人主页</p>
-    <p class="page-footer__meta" id="footer-meta">内容由 data/profile.js 统一维护</p>
+</div>
+<div class="archive">
+  <h1 class="page__title">Home Page - 苏鹏飞</h1>
+  <p>苏鹏飞，电气工程博士，现任大湾区大学与清华大学深圳研究院博士后站博士后（2025.09 至今）。2021.01–2025.06 于英国卡迪夫大学攻读电气工程博士学位，导师为周越、吴建中、Meysam Qadrdan；此前获天津大学电气工程硕士学位、东北电力大学电气工程及其自动化学士学位，并曾任职于阳光电源股份有限公司。</p>
+  <p>研究聚焦工业流程灵活性与低碳电力系统的协同优化，涵盖炼钢流程多目标优化排产、工业负荷灵活性评估与需求响应、混合储能系统，以及面向净零电力系统的多能源协同。作为子课题负责人承担英国工程与自然科学研究理事会（EPSRC）项目 1 项，并作为技术骨干参与欧盟「欧洲地平线」、NSFC–EPSRC 国际合作重点项目等重大项目 3 项。</p>
+  <p>累计发表 SCI/EI 检索论文 10 余篇，受理国家发明专利 9 项（其中授权 3 项）；担任 <em>Electronics</em>、《中国电力》等国内外专刊特约编辑，以及 <em>Applied Energy</em>、<em>Journal of Cleaner Production</em>、<em>Energy</em> 等学术期刊审稿人。</p>
+  <p>Contact: aca_spf@163.com</p>
+  <hr />
+  <h1 id="news">News</h1>
+  <ul class="news-list">
+    <li><p><strong>[Accepted]</strong> 论文 “<strong>Decarbonisation Pathways for a Steel Plant within an Evolving Hydrogen Driven Regional Energy System</strong>” 被 <em>Energy Conversion and Management</em> 录用。</p></li>
+    <li><p><strong>[2026-09-18]</strong> 国家发明专利「炼钢生产调度优化方法、装置和程序产品」获受理（陈戈、苏鹏飞、邓浩然）。</p></li>
+    <li><p><strong>[2026]</strong> 获 IEEE I&amp;CPS Asia 2026 杰出组织奖、ICSCGE 2026 最佳审稿人。</p></li>
+    <li><p><strong>[2025-09]</strong> 加入大湾区大学与清华大学深圳研究院博士后站，任博士后。</p></li>
+    <li><p><strong>[2025-04]</strong> 论文 “<strong>Cost-Effective Scheduling of a Hydrogen-based Iron and Steel Plant Supplied by a Grid-assisted Renewable Energy System</strong>” 发表于 <em>Applied Energy</em>, vol. 384。</p></li>
+    <li><p><strong>[2024]</strong> 获 Sustainability in Steel SUSTAIN Conference 最佳海报奖。</p></li>
+    <li><p><strong>[2023-07]</strong> 论文 “<strong>Multi-Objective Scheduling of a Steelmaking Plant Integrated with Renewable Energy Sources and Energy Storage Systems</strong>” 发表于 <em>Journal of Cleaner Production</em>, vol. 14, no. 4, pp. 2709–2722。</p></li>
+    <li><p><strong>[2023-06]</strong> 国家发明专利「光伏逆变器故障检测方法、设备及介质」（CN112731022B）获授权。</p></li>
+    <li><p><strong>[2023-05]</strong> 国家发明专利「一种户用微网能量路由器能量管理单元的本地控制方法」（CN110535190B）获授权。</p></li>
+    <li><p><strong>[2023-04]</strong> 国家发明专利「光伏逆变器的状态检测方法、装置及计算机可读存储介质」（CN113092900B）获授权。</p></li>
+    <li><p><strong>[2023]</strong> 会议论文 “<strong>Demand Response from Steelmaking Process Coordinated with Energy Storage Systems</strong>” 在 IEEE PES ISGT Europe 作口头报告。</p></li>
+    <li><p><strong>[2023]</strong> 会议论文 “<strong>Optimal Scheduling of Steelmaking Process Considering Multiple Electricity Bill Components</strong>” 在 IEEE EI² 作口头报告。</p></li>
+    <li><p><strong>[2021-01]</strong> 赴英国卡迪夫大学攻读电气工程博士学位，获国家留学基金委公派留学奖学金。</p></li>
+  </ul>
+  <p class="page-note">以上为代表性论文、专利与荣誉；完整成果列表见 <a href="publications/index.html">Publications</a> 页面。</p>
+</div>
+</div>
+<div class="page__footer">
+  <footer>
+    <a href="index.html" data-href="home" data-field="footerText">欢迎访问苏鹏飞的个人主页</a>
+    <div class="page__footer-copyright" data-field="copyrightText">&copy; 2026 苏鹏飞</div>
   </footer>
-
-  <!-- 数据层与交互层：均为本地相对路径，可直接以 file:// 打开预览 -->
-  <script src="data/profile.js"></script>
-  <script src="assets/js/main.js"></script>
+</div>
+<script src="data/profile.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/main.min.js"></script>
 </body>
 </html>
