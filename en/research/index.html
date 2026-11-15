@@ -73,7 +73,7 @@
 <div class="archive">
   <h1 class="page__title">Research</h1>
   <h2 id="research-interests">Research Interests</h2>
-  <p>His research addresses the coordinated optimisation of industrial process flexibility and low-carbon power systems. Main topics are multi-objective scheduling of steelmaking processes, industrial load flexibility assessment and demand response, hybrid energy storage systems and flexibility services, and multi-energy coordination for net-zero power systems.</p>
+  <p>His research addresses the coordinated optimisation of industrial process flexibility and low-carbon power systems. Main topics are multi-objective scheduling of steelmaking processes, industrial load flexibility assessment and demand response, hybrid energy storage systems and flexibility services, and multi-energy coordination for net-zero power systems. A central thread is electrified steelmaking in renewable-rich power systems: determining transition pathways and investment at the planning level, and coordinating electric arc furnaces, electrolysers and storage at the scheduling level so that steel production becomes a flexibility resource for the grid.</p>
   <p class="page-note">Keywords: industrial load flexibility &middot; steelmaking process scheduling &middot; hybrid energy storage and demand response &middot; multi-energy system coordination</p>
   <h2 id="research-figures">Research at a Glance</h2>
 
@@ -118,6 +118,71 @@
     <img src="../../assets/images/research/research-hybrid-en.svg" alt="Hybrid energy storage and multi-energy coordination framework">
   </a>
   <figcaption>Figure 4. Supply, storage and demand coupled through a coordination layer towards net-zero power systems; project acronyms in brackets are those listed in the CV.</figcaption>
+</figure>
+</div>
+
+  <h2 id="selected-studies">Selected Studies</h2>
+  <p>Coordinated decarbonisation of steelmaking and power systems requires both planning and scheduling decisions: annual investment in low-carbon transition pathways, and hourly or batch-level operation of electric arc furnaces, electrolysers and storage. The three studies below address transition planning, multi-objective EAF scheduling, and hydrogen-based steelmaking coordination.</p>
+
+<div class="research-block">
+<h3>System under Study &middot; A Low-carbon Steel Plant with Multiple Decarbonisation Options</h3>
+<p>The object is an EAF-based steel plant supplied by the grid, renewables, storage, natural gas, hydrogen and scrap, whose energy and material flows are coordinated under cost and emission constraints.</p>
+<figure class="research-figure research-figure--detail">
+  <a class="research-figure__zoom" href="../../assets/images/research/steel-plant-options.png" target="_blank" rel="noopener">
+    <img src="../../assets/images/research/steel-plant-options.png" alt="Low-carbon steel plant integrating grid, renewables, storage, gas, hydrogen and scrap">
+  </a>
+  <figcaption>Figure 5. Energy and material flows of a low-carbon steel plant integrating the grid, renewables, storage, natural gas, hydrogen and scrap.</figcaption>
+</figure>
+</div>
+
+<div class="research-block">
+<h3>Study 1 &middot; Low-carbon Steelmaking Transition Planning</h3>
+<p>Annual investment decisions and representative hourly operation are co-optimised under regional energy constraints, with a GDP formulation linking investment and operation and joint clustering yielding eight representative scenarios. Pathway choice balances cost against emissions: relative to the EAF-only route, EAF+DRI raises the discounted total cost by 18.1% while cutting cumulative operational emissions by 41.0%. A further 30% reduction in hydrogen prices from 2033 advances full-H<sub>2</sub> adoption from 2048 to 2040.</p>
+<figure class="research-figure research-figure--detail">
+  <a class="research-figure__zoom" href="../../assets/images/research/study1-pathways.png" target="_blank" rel="noopener">
+    <img src="../../assets/images/research/study1-pathways.png" alt="Technology pathways for EAF-only and EAF+DRI routes, 2025-2050">
+  </a>
+  <figcaption>Figure 6. Transition pathways under the baseline hydrogen price (EAF-only and EAF+DRI routes).</figcaption>
+</figure>
+<figure class="research-figure research-figure--detail">
+  <a class="research-figure__zoom" href="../../assets/images/research/study1-lcos.png" target="_blank" rel="noopener">
+    <img src="../../assets/images/research/study1-lcos.png" alt="Levelised cost of steel versus scrap price and carbon tax for two routes">
+  </a>
+  <figcaption>Figure 7. Levelised cost of steel (LCOS) versus scrap price and carbon tax.</figcaption>
+</figure>
+</div>
+
+<div class="research-block">
+<h3>Study 2 &middot; Multi-objective EAF Scheduling</h3>
+<p>An extended resource&ndash;task network (RTN) is built for the EAF&ndash;AOD&ndash;LF&ndash;CC route, integrating production, electricity-use and indirect-emission constraints, and a normal boundary intersection (NBI) method generates the cost&ndash;makespan Pareto set. In a case with 10 MW PV, 10 MW wind and 5 MW / 20 MWh battery storage, a 1430 min joint schedule reduces electricity and emission costs by 68.5% and indirect emissions by 83.5% relative to a fixed 785 min schedule. Longer makespans unlock flexibility, and storage reduces costs further.</p>
+<figure class="research-figure research-figure--detail">
+  <a class="research-figure__zoom" href="../../assets/images/research/study2-rtn.png" target="_blank" rel="noopener">
+    <img src="../../assets/images/research/study2-rtn.png" alt="Extended resource-task network for EAF steelmaking with continuous and discrete interactions">
+  </a>
+  <figcaption>Figure 8. Extended resource-task network (RTN) for EAF steelmaking, with continuous and discrete interactions.</figcaption>
+</figure>
+<figure class="research-figure research-figure--detail">
+  <a class="research-figure__zoom" href="../../assets/images/research/study2-pareto.png" target="_blank" rel="noopener">
+    <img src="../../assets/images/research/study2-pareto.png" alt="Cost-makespan Pareto fronts for MO-FlexSP and MO-FlexSP+BESS">
+  </a>
+  <figcaption>Figure 9. Cost-makespan Pareto fronts: MO-FlexSP and MO-FlexSP+BESS with integrated storage.</figcaption>
+</figure>
+</div>
+
+<div class="research-block">
+<h3>Study 3 &middot; Hydrogen-based Steelmaking Coordination</h3>
+<p>Electrolysis, hydrogen storage, direct reduction and EAF operations are modelled together, with RTN and boundary-dependence constraints ensuring the feasibility of a six-batch production schedule. Electrolyser power adjustment complements EAF batch shifting, while the hydrogen tank buffers day-ahead price and wind variability. Under the cost-minimising schedule, total operating cost falls from 533.8 k&pound; to 221.1 k&pound; (58.58%), including power purchases, curtailment penalties and indirect emissions.</p>
+<figure class="research-figure research-figure--detail">
+  <a class="research-figure__zoom" href="../../assets/images/research/study3-flow.png" target="_blank" rel="noopener">
+    <img src="../../assets/images/research/study3-flow.png" alt="Hydrogen-based steelmaking process and energy flows">
+  </a>
+  <figcaption>Figure 10. Hydrogen-based steelmaking: wind and grid power, electrolyser, hydrogen storage, shaft furnace, DRI and EAF.</figcaption>
+</figure>
+<figure class="research-figure research-figure--detail">
+  <a class="research-figure__zoom" href="../../assets/images/research/study3-schedules.png" target="_blank" rel="noopener">
+    <img src="../../assets/images/research/study3-schedules.png" alt="Day-ahead price and wind forecast, PEMEL and EAF power, and hydrogen storage state">
+  </a>
+  <figcaption>Figure 11. Day-ahead electricity price and wind forecast, PEMEL/EAF power profiles, and hydrogen storage state under the cost-minimising schedule.</figcaption>
 </figure>
 </div>
 

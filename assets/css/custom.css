@@ -177,6 +177,7 @@ figure.research-figure a.research-figure__zoom {
   display: block;
   border-bottom: 0;
   text-decoration: none;
+  cursor: zoom-in;
 }
 
 figure.research-figure a.research-figure__zoom::before,
@@ -220,5 +221,11 @@ figure.research-figure figcaption {
   figure.research-figure figcaption {
     min-width: 620px;
     box-sizing: border-box;
+  }
+
+  /* EI2 报告原图分辨率更高、图内标注更小 */
+  figure.research-figure--detail img,
+  figure.research-figure--detail figcaption {
+    min-width: 900px;
   }
 }
