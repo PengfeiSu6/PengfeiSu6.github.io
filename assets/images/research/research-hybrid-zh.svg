@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" width="900" height="290" role="img" aria-label="混合储能与多能源系统协同及净零电力系统">
+<title>混合储能与多能源系统协同及净零电力系统</title>
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7"
+          markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#7a8288"/>
+  </marker>
+  <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7"
+          markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f6fb2"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="900" height="290" fill="#ffffff"/>
+<text x="450" y="26" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="14" fill="#1f6fb2" font-weight="bold" text-anchor="middle">方向三：混合储能与净零电力系统多能源协同</text>
+<rect x="16" y="52" width="268" height="84" rx="6" fill="none" stroke="#c9d2d9" stroke-width="1" stroke-dasharray="5 4"/>
+<rect x="28" y="43" width="33.1" height="18" fill="#ffffff"/>
+<text x="32" y="56" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="11" fill="#7a8288" font-weight="bold" text-anchor="start">源侧</text>
+<rect x="30" y="74" width="76" height="46" rx="5" fill="#ffffff" stroke="#c9d2d9" stroke-width="1.2"/>
+<text x="68.0" y="100.33333333333333" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10" fill="#494e52" font-weight="normal" text-anchor="middle">风电</text>
+<rect x="114" y="74" width="76" height="46" rx="5" fill="#ffffff" stroke="#c9d2d9" stroke-width="1.2"/>
+<text x="152.0" y="100.33333333333333" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10" fill="#494e52" font-weight="normal" text-anchor="middle">光伏</text>
+<rect x="198" y="74" width="76" height="46" rx="5" fill="#ffffff" stroke="#c9d2d9" stroke-width="1.2"/>
+<text x="236.0" y="100.33333333333333" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10" fill="#494e52" font-weight="normal" text-anchor="middle">外部电网</text>
+<rect x="16" y="158" width="268" height="118" rx="6" fill="none" stroke="#c9d2d9" stroke-width="1" stroke-dasharray="5 4"/>
+<rect x="28" y="149" width="44.650000000000006" height="18" fill="#ffffff"/>
+<text x="32" y="162" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="11" fill="#7a8288" font-weight="bold" text-anchor="start">储能侧</text>
+<rect x="30" y="180" width="76" height="52" rx="5" fill="#f7f9fa" stroke="#4d8fc7" stroke-width="1.2"/>
+<text x="68.0" y="201.91666666666666" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="9.5" fill="#494e52" font-weight="normal" text-anchor="middle">储能</text>
+<text x="68.0" y="216.41666666666666" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="9.5" fill="#494e52" font-weight="normal" text-anchor="middle">单元 1</text>
+<rect x="114" y="180" width="76" height="52" rx="5" fill="#f7f9fa" stroke="#4d8fc7" stroke-width="1.2"/>
+<text x="152.0" y="201.91666666666666" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="9.5" fill="#494e52" font-weight="normal" text-anchor="middle">储能</text>
+<text x="152.0" y="216.41666666666666" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="9.5" fill="#494e52" font-weight="normal" text-anchor="middle">单元 2</text>
+<rect x="198" y="180" width="76" height="52" rx="5" fill="#f7f9fa" stroke="#4d8fc7" stroke-width="1.2"/>
+<text x="236.0" y="201.91666666666666" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="9.5" fill="#494e52" font-weight="normal" text-anchor="middle">互联</text>
+<text x="236.0" y="216.41666666666666" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="9.5" fill="#494e52" font-weight="normal" text-anchor="middle">接口</text>
+<rect x="30" y="240" width="240" height="26" rx="5" fill="#ffffff" stroke="#c9d2d9" stroke-width="1.2"/>
+<text x="150.0" y="256.1666666666667" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="9.5" fill="#494e52" font-weight="normal" text-anchor="middle">互联互通的异构储能（FlexCHESS）</text>
+<rect x="304" y="52" width="292" height="224" rx="6" fill="none" stroke="#c9d2d9" stroke-width="1" stroke-dasharray="5 4"/>
+<rect x="316" y="43" width="67.75" height="18" fill="#ffffff"/>
+<text x="320" y="56" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="11" fill="#7a8288" font-weight="bold" text-anchor="start">协调控制层</text>
+<rect x="330" y="76" width="240" height="62" rx="5" fill="#eaf3fb" stroke="#1f6fb2" stroke-width="1.2"/>
+<text x="450.0" y="102.5" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="12" fill="#494e52" font-weight="bold" text-anchor="middle">能量管理系统 /</text>
+<text x="450.0" y="119.5" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="12" fill="#494e52" font-weight="bold" text-anchor="middle">分区协调控制</text>
+<rect x="330" y="158" width="112" height="54" rx="5" fill="#ffffff" stroke="#c9d2d9" stroke-width="1.2"/>
+<text x="386.0" y="180.83333333333334" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10" fill="#494e52" font-weight="normal" text-anchor="middle">功率 / 能量</text>
+<text x="386.0" y="195.83333333333334" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10" fill="#494e52" font-weight="normal" text-anchor="middle">分配</text>
+<rect x="458" y="158" width="112" height="54" rx="5" fill="#ffffff" stroke="#c9d2d9" stroke-width="1.2"/>
+<text x="514.0" y="180.83333333333334" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10" fill="#494e52" font-weight="normal" text-anchor="middle">灵活性</text>
+<text x="514.0" y="195.83333333333334" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10" fill="#494e52" font-weight="normal" text-anchor="middle">服务报价</text>
+<rect x="330" y="226" width="240" height="36" rx="5" fill="#f7f9fa" stroke="#4d8fc7" stroke-width="1.2"/>
+<text x="450.0" y="247.33333333333334" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10" fill="#494e52" font-weight="normal" text-anchor="middle">信息物理融合的城市能源系统（MC2）</text>
+<path d="M 450 140 L 450 156" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 386 214 L 386 224" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 514 214 L 514 224" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="616" y="52" width="268" height="118" rx="6" fill="none" stroke="#c9d2d9" stroke-width="1" stroke-dasharray="5 4"/>
+<rect x="628" y="43" width="33.1" height="18" fill="#ffffff"/>
+<text x="632" y="56" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="11" fill="#7a8288" font-weight="bold" text-anchor="start">荷侧</text>
+<rect x="632" y="74" width="236" height="38" rx="5" fill="#ffffff" stroke="#c9d2d9" stroke-width="1.2"/>
+<text x="750.0" y="96.5" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10.5" fill="#494e52" font-weight="normal" text-anchor="middle">工业流程负荷</text>
+<rect x="632" y="120" width="236" height="38" rx="5" fill="#ffffff" stroke="#c9d2d9" stroke-width="1.2"/>
+<text x="750.0" y="142.5" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="10.5" fill="#494e52" font-weight="normal" text-anchor="middle">城市 / 园区能源系统</text>
+<rect x="616" y="190" width="268" height="86" rx="6" fill="none" stroke="#c9d2d9" stroke-width="1" stroke-dasharray="5 4"/>
+<rect x="628" y="181" width="33.1" height="18" fill="#ffffff"/>
+<text x="632" y="194" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="11" fill="#7a8288" font-weight="bold" text-anchor="start">目标</text>
+<rect x="632" y="212" width="236" height="48" rx="5" fill="#eaf3fb" stroke="#1f6fb2" stroke-width="1.2"/>
+<text x="750.0" y="240.0" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="12" fill="#494e52" font-weight="bold" text-anchor="middle">净零电力系统</text>
+<path d="M 284 94 L 302 94" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 284 210 L 302 210" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 596 94 L 614 94" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 596 130 L 614 130" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 750 172 L 750 188" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 616 230 L 598 230" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M 284 262 L 302 262" fill="none" stroke="#7a8288" stroke-width="1.4" marker-end="url(#ar)"/>
+</svg>

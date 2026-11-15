@@ -144,3 +144,81 @@ ul.plain-list li {
 .project-block h3 {
   margin-bottom: 0.2em;
 }
+
+/* --------------------------------------------------------------------------
+   Research 页：研究方向示意图
+   --------------------------------------------------------------------------
+   主题把 figure 设为 flex 且给 img 加了 margin / 圆角 / 过渡，
+   figcaption 用 Georgia 衬线；这里显式覆盖，得到「细边框 + 图 + 图注」的
+   克制版式，不使用阴影、彩色标签或编号徽章。 */
+.research-block {
+  margin-bottom: 2.4em;
+}
+
+.research-block h3 {
+  margin-bottom: 0.5em;
+}
+
+.research-block > p {
+  margin-bottom: 1em;
+}
+
+figure.research-figure {
+  display: block;
+  margin: 0;
+  border: 1px solid #e3e6e8;
+  border-radius: 4px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* 点击示意图在新标签查看原尺寸；禁用主题的链接下划线动画 */
+figure.research-figure a.research-figure__zoom {
+  display: block;
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+figure.research-figure a.research-figure__zoom::before,
+figure.research-figure a.research-figure__zoom::after {
+  display: none;
+}
+
+figure.research-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
+figure.research-figure figcaption {
+  margin: 0;
+  padding: 0.65em 0.9em;
+  border-top: 1px solid #e3e6e8;
+  background: #f8f9f9;
+  color: #7a8288;
+  font-family: inherit;
+  font-size: 0.85em;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* 窄屏：保持示意图的最小可读宽度，允许在卡片内横向滚动 */
+@media screen and (max-width: 640px) {
+  figure.research-figure {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  figure.research-figure img {
+    min-width: 620px;
+  }
+
+  figure.research-figure figcaption {
+    min-width: 620px;
+    box-sizing: border-box;
+  }
+}
