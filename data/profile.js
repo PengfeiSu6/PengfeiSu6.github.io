@@ -245,6 +245,26 @@ window.SITE_PROFILE = {
     { text: "Applied Energy、Journal of Cleaner Production、Energy 等学术期刊审稿人" }
   ],
 
+  /* [补充] 来源：两个专刊的官方征稿页（2026-11-15 核验），非简历原文。
+     角色、专刊名称与截稿日期取自征稿启事；链接供 Services / News 页面静态 HTML 引用。
+     页面正文不依赖本数组渲染，此处仅作可追溯台账。 */
+  callsForPapers: [
+    {
+      journal: "Electronics",
+      title: "AI-Enabled Demand-Side Flexibility: Forecasting, Coordination and Market Participation",
+      role: "客座编辑",
+      deadline: "2027-07-15",
+      url: "https://www.mdpi.com/journal/electronics/special_issues/10xf9x2i27"
+    },
+    {
+      journal: "中国电力",
+      title: "面向新型电力系统安全稳定运行的多元负荷可调能力与互动关键技术",
+      role: "专栏特约主编",
+      deadline: "2026-12-31",
+      url: "https://www.electricpower.com.cn/news/368"
+    }
+  ],
+
   /* ================================================================ 06 技能 */
   /* [归纳] 简历没有独立的技能清单。以下标签全部提取自「项目经历」「科研成果」中
      反复出现的方法、系统与协作场景关键词，未添加软件 / 编程语言等简历未提及的能力。
