@@ -25,6 +25,29 @@
   display: none;
 }
 
+/* 中英文切换项：与常规菜单保持同一视觉层级，仅用细竖线区隔。
+   加入第 8 个菜单项后，略微收紧整体横向间距，保证语言切换在桌面宽度下
+   不会被 greedy-nav 收进下拉（英文版品牌名比中文版长，余量更小）。
+   主题原有的 first-child / last-child 边距归零规则优先级更高，仍生效。 */
+.greedy-nav .visible-links > li > a {
+  margin-left: 0.78rem;
+  margin-right: 0.78rem;
+}
+
+.greedy-nav .visible-links > li.masthead__menu-item--lang {
+  padding-left: 0.6rem;
+  border-left: 1px solid #f2f3f3;
+}
+
+.greedy-nav .visible-links > li.masthead__menu-item--lang a {
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+/* 英文版侧栏沿用主题的 nowrap 单行排版；条目标签已在生成时控制长度
+   （Great Bay University / Electrical Eng. PhD / Email / Contact），
+   因此不会溢出到右侧正文区。若后续追加更长的标签，可在此放开换行。 */
+
 /* 论文、专利的编号列表（与参考站 publications 页内联样式保持一致） */
 ol.custom-counter {
   list-style: none;

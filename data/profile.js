@@ -3,27 +3,31 @@
    --------------------------------------------------------------------------
    数据来源：《英国卡迪夫大学_电气工程_苏鹏飞_1025.pdf》（3 页）
 
-   ── 当前架构（阶段五：多页面 academicpages / Minimal Mistakes） ──────────
-   站点现在是「真正的多页面静态站点」，与参考站由开源主题生成的产物一致：
+   ── 当前架构（阶段六：中英双语多页面 academicpages / Minimal Mistakes） ──
+   站点是「真正的多页面静态站点」，与参考站由开源主题生成的产物一致。
+   共 14 个页面，中文为默认（根路径），英文在 /en/，两版一一对应：
 
-     index.html                 首页：个人简介 + 论文 / News
-     publications/index.html    论文与专利
-     services/index.html        学术兼职与服务
-     research/index.html        研究方向、项目与方法
-     education/index.html       教育背景与工作经历
-     awards/index.html          荣誉奖项
-     contact/index.html         联系方式
+     根路径                     /en/                     内容
+     index.html                en/index.html            个人简介 + 论文 / News
+     publications/index.html   en/publications/...      论文与专利
+     services/index.html       en/services/...          学术兼职与服务
+     research/index.html       en/research/...          研究方向、项目与方法
+     education/index.html      en/education/...         教育背景与工作经历
+     awards/index.html         en/awards/...            荣誉奖项
+     contact/index.html        en/contact/...           联系方式
 
    每个页面都复用同一套 masthead + sidebar.sticky + archive + page__footer，
-   导航是真实页面链接（不是 #锚点滚动）。
+   导航是真实页面链接（不是 #锚点滚动），末尾一项为语言切换（EN / 中文），
+   head 内含 hreflang alternate 与 x-default。
 
    ── 本文件的职责 ────────────────────────────────────────────────────────
-   1) 运行时：字段 name / bio / emailHref / footerText / copyrightText
-      由 assets/js/site.js 写入 7 个页面的 [data-field] / [data-href] 挂载点，
-      因此姓名、身份、邮箱、页脚只需在这里改一次，全站同步。
-   2) 内容台账：下方其余数组是从简历逐条录入的客观事实，
-      各页面正文的静态 HTML 即以本文件为依据生成。修改页面正文时，
-      请同步维护这里对应的数组，避免台账与页面不一致。
+   1) 运行时：SITE_PROFILE（中文）与 SITE_PROFILE_EN（英文）各含
+      name / bio / emailHref / footerText / copyrightText 五个共享字段。
+      assets/js/site.js 按 <html lang> 选择其一，写入 14 个页面的
+      [data-field] / [data-href] 挂载点，因此身份与页脚只需改一处，全站同步。
+   2) 内容台账：SITE_PROFILE 中其余数组是从简历逐条录入的客观事实，
+      中文页面正文的静态 HTML 即以本文件为依据生成；英文版正文为其英译。
+      修改任一语言正文时，请同步维护另一语言页面与这里的数组。
 
    ── 标记含义 ────────────────────────────────────────────────────────────
    [原文]     简历中直接可核实的客观信息，逐字或压缩表述录入
@@ -269,6 +273,21 @@ window.SITE_PROFILE = {
   contact: [
     { label: "邮箱", value: "aca_spf@163.com", href: "mailto:aca_spf@163.com" }
   ]
+};
+
+/* ==========================================================================
+   英文版共享身份字段（/en/ 下 7 个页面）
+   --------------------------------------------------------------------------
+   与 SITE_PROFILE 一一对应，供 assets/js/site.js 在 <html lang="en"> 时选用。
+   机构与学历名称采用学术界通用英译；如本人有官方英文署名／机构名称，
+   只需修改此处的 name / bio / footerText / copyrightText 四个字段。
+   ========================================================================== */
+window.SITE_PROFILE_EN = {
+  name: "Pengfei Su",
+  bio: "Postdoctoral Fellow, Great Bay University & Research Institute of Tsinghua University in Shenzhen",
+  emailHref: "mailto:aca_spf@163.com",
+  footerText: "Welcome to Pengfei Su's Personal Website",
+  copyrightText: "© 2026 Pengfei Su"
 };
 
 /* ==========================================================================

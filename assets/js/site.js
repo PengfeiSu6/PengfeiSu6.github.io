@@ -1,9 +1,10 @@
 /* ==========================================================================
    site.js — 全站共享身份字段绑定
    --------------------------------------------------------------------------
-   本文件不含任何内容。它只把 data/profile.js 中的共享字段
-   （姓名、身份简介、邮箱、页脚文案）写入各页面的 [data-field] / [data-href]
-   挂载点，使 7 个页面的作者栏与页脚保持一处维护。
+   本文件不含任何内容。它按 <html lang> 从 data/profile.js 中选择
+   SITE_PROFILE（中文，根路径 7 页）或 SITE_PROFILE_EN（英文，/en/ 7 页），
+   把共享字段（姓名、身份简介、邮箱、页脚文案）写入 [data-field] / [data-href]
+   挂载点，使 14 个页面的作者栏与页脚保持一处维护。
 
    页面正文（个人简介、论文、项目、经历等）是静态 HTML，
    与 academicpages 生成的页面一致，不依赖 JS 即可阅读。
@@ -12,7 +13,10 @@
    site.js 同步执行完毕后再由主题 JS 计算 greedy-nav 宽度，避免测量偏差。
    ========================================================================== */
 (function () {
-  var profile = window.SITE_PROFILE || {};
+  // 按 <html lang> 选择中/英共享字段：zh-CN -> SITE_PROFILE，en -> SITE_PROFILE_EN
+  var lang = (document.documentElement.lang || "zh-CN").toLowerCase();
+  var isEn = lang.indexOf("en") === 0;
+  var profile = (isEn ? window.SITE_PROFILE_EN : window.SITE_PROFILE) || {};
   var home = document.body.getAttribute("data-home") || "index.html";
 
   function forEach(selector, callback) {
