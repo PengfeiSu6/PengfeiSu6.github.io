@@ -25,23 +25,52 @@
   display: none;
 }
 
-/* 中英文切换项：与常规菜单保持同一视觉层级，仅用细竖线区隔。
-   加入第 8 个菜单项后，略微收紧整体横向间距，保证语言切换在桌面宽度下
-   不会被 greedy-nav 收进下拉（英文版品牌名比中文版长，余量更小）。
+/* --------------------------------------------------------------------------
+   中英文切换按钮
+   --------------------------------------------------------------------------
+   第 8 个菜单项做成明确的按钮（地球图标 + 目标语言），点击即跳转到
+   另一语言的同名页面。按钮比纯文字略宽，因此整体横向间距进一步收紧，
+   保证 ≥925px 时 8 项仍全部常显、不落入下拉。
    主题原有的 first-child / last-child 边距归零规则优先级更高，仍生效。 */
 .greedy-nav .visible-links > li > a {
-  margin-left: 0.78rem;
-  margin-right: 0.78rem;
+  margin-left: 0.65rem;
+  margin-right: 0.65rem;
 }
 
 .greedy-nav .visible-links > li.masthead__menu-item--lang {
-  padding-left: 0.6rem;
-  border-left: 1px solid #f2f3f3;
+  padding-left: 0.35rem;
 }
 
-.greedy-nav .visible-links > li.masthead__menu-item--lang a {
-  font-size: 0.9em;
+.greedy-nav .visible-links > li.masthead__menu-item--lang a.lang-btn,
+.greedy-nav .hidden-links > li.masthead__menu-item--lang a.lang-btn {
+  display: inline-block;
+  margin: 0 0 0 0.4rem;
+  padding: 0.3em 0.7em;
+  border: 1px solid #bdc1c4;
+  border-radius: 3px;
+  background: #f8f9f9;
+  color: #5c6266;
+  font-size: 0.8em;
+  line-height: 1.5;
   white-space: nowrap;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.greedy-nav a.lang-btn:hover {
+  background: #e9edef;
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* 主题给 .visible-links a 加的下划线动画不适用于按钮 */
+.greedy-nav .visible-links a.lang-btn::before {
+  display: none;
+}
+
+a.lang-btn i {
+  margin-right: 0.35em;
 }
 
 /* 英文版侧栏沿用主题的 nowrap 单行排版；条目标签已在生成时控制长度
