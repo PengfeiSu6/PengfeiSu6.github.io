@@ -348,8 +348,9 @@ window.SITE_PROFILE_EN = {
    · 论文卷期、影响因子、引用数按简历原文录入，正式对外前建议与出版方核对。
    · 仍未提供的信息：现居城市、照片、个人主页 / GitHub / Scholar / ORCID 链接、
      具体软件工具与语言能力。页面不会编造这些信息。
-   · 照片：assets/images/profile.svg 目前是蓝色椭圆占位头像，
-     替换时改各页面 sidebar 中 <img class="author__avatar"> 的 src。
+   · 照片：assets/images/profile.jpg 为用户提供的个人形象照，由 1080×1350
+     原图裁为 600×600 方形，以适配主题的圆形头像 (.author__avatar img
+     { max-width:175px; border-radius:50% })。更换时直接替换该文件即可。
    · 新增页面：复制任一子页 index.html，改 <title>、data-home、导航相对路径
      与 .archive 内容，再向导航 <ul class="visible-links"> 追加一项即可。
    ========================================================================== */
