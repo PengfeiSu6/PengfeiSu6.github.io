@@ -15,6 +15,7 @@
 <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';</script>
 <link rel="stylesheet" href="../../assets/css/main.css">
 <link rel="stylesheet" href="../../assets/css/custom.css">
+<link rel="stylesheet" href="../../assets/css/research.css">
 </head>
 <body data-home="../index.html">
 <!-- academicpages layout: masthead (real page links) + #main (sticky sidebar + archive) + page__footer
@@ -69,142 +70,102 @@
     </div>
   </div>
 </div>
-<div class="archive">
-  <h1 class="page__title">Research</h1>
-  <h2 id="research-interests">Research Interests</h2>
-  <p>His research addresses the coordinated optimisation of industrial process flexibility and low-carbon power systems. Main topics are multi-objective scheduling of steelmaking processes, industrial load flexibility assessment and demand response, hybrid energy storage systems and flexibility services, and multi-energy coordination for net-zero power systems. A central thread is electrified steelmaking in renewable-rich power systems: determining transition pathways and investment at the planning level, and coordinating electric arc furnaces, electrolysers and storage at the scheduling level so that steel production becomes a flexibility resource for the grid. Along this thread, one line of work addresses electric arc furnace steelmaking by bringing electricity cost, indirect emissions and order processing time requirements into a single multi-objective optimisation; another addresses hydrogen-based steel plants by bringing the coupled operation of electrolysis, hydrogen storage, shaft-furnace direct reduction and the EAF into short-term scheduling, improving economics through operation rather than additional equipment.</p>
-  <p class="page-note">Keywords: industrial load flexibility &middot; steelmaking process scheduling &middot; hybrid energy storage and demand response &middot; multi-energy system coordination</p>
-  <h2 id="research-figures">Research at a Glance</h2>
-
-<div class="research-block">
-<h3>Research Framework</h3>
-<p>The work takes industrial processes (chiefly electric arc furnace steelmaking) as its object. Starting from operating conditions and measurements, it proceeds through mechanism-based modelling, multi-objective optimisation, flexibility assessment and digital-twin validation, and serves low-carbon power systems and grid flexibility services. Assessment and deployment results feed back into models and strategies. For deeply coupled processes, a separate resource&ndash;task network (RTN) model is built for each subprocess and integrated through boundary dependency constraints, so that material and energy balances, task start-up and duration, and transfer times are represented together. Process simulation tools are effective for parameter optimisation but struggle with task dependencies, and economic assessments that omit short-term operating constraints can yield schedules that are not feasible in production; such unified modelling is therefore the basis for feasible schedules.</p>
+<div class="archive research-page">
+<h1 class="page__title">Research</h1>
+<p class="research-lead">My research connects industrial processes with low-carbon power systems, from long-term transition planning and short-term production scheduling to grid flexibility services. Electrified and hydrogen-based steelmaking are central applications.</p>
+<nav class="research-nav" aria-label="On this page"><a href="#research-interests">Research themes</a><a href="#selected-studies">Selected studies</a><a href="#projects">Projects</a><a href="#methods">Methods</a></nav>
+<h2 id="research-interests">Research themes</h2>
+<div class="research-themes"><section><h3>Low-carbon transition planning</h3><p>Link long-term investment with short-term operation to assess feasible steelmaking transition pathways under cost, emissions and regional energy constraints.</p></section><section><h3>Steelmaking process scheduling</h3><p>Use resource–task networks and multi-objective optimisation to coordinate electric arc furnaces, electrolysis, hydrogen storage and renewables under production constraints.</p></section><section><h3>Industrial flexibility and multi-energy coordination</h3><p>Assess industrial load and hybrid storage flexibility for demand response, energy management and grid flexibility services.</p></section></div>
+<details class="research-details"><summary>Explore the research framework and theme diagrams</summary>
 <figure class="research-figure">
   <a class="research-figure__zoom" href="../../assets/images/research/research-overview-en.svg" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/research-overview-en.svg" alt="Framework coupling industrial process flexibility and low-carbon power systems">
+    <img loading="lazy" src="../../assets/images/research/research-overview-en.svg" alt="Framework coupling industrial process flexibility and low-carbon power systems">
   </a>
-  <figcaption>Figure 1. Research framework: assets and data &rarr; modelling and optimisation &rarr; objectives and services, with an assessment and deployment feedback loop.</figcaption>
-</figure>
-</div>
-
-<div class="research-block">
-<h3>Direction 1 &middot; Multi-objective Steelmaking Scheduling</h3>
-<p>Corresponds to Sub-project 1 of the SUSTAIN Manufacturing Hub, &ldquo;Mechanism-based multi-objective day-ahead scheduling optimisation for steel plants&rdquo;. Orders and due dates, energy prices, and process and unit constraints feed a mechanism-based model of electric arc furnace steelmaking and energy management algorithms, producing a day-ahead schedule that is validated on a steel-plant digital-twin testbed. This direction is underpinned by the representative study below.</p>
-<p><strong>Citation:</strong> Su P, Zhou Y*, Wu J. Multi-objective scheduling of a steelmaking plant integrated with renewable energy sources and energy storage systems: Balancing costs, emissions and make-span. <em>Journal of Cleaner Production</em>, 2023, 428: 139350. DOI: 10.1016/j.jclepro.2023.139350.</p>
-<p><strong>Introduction:</strong> Steelmaking accounts for roughly 8% of global energy demand and 7% of energy-related CO<sub>2</sub> emissions, which makes it a hard-to-abate sector. Secondary steelmaking in electric arc furnaces reduces emissions through scrap recycling, but its reliance on electricity brings both high power costs and substantial indirect grid emissions. Multi-objective scheduling can address both, yet existing resource&ndash;task network (RTN) models track electricity consumption without indirect carbon emissions, and the processing time requirement (PTR) attached to customer orders is usually ignored even though it governs the make-span and therefore the feasibility of a schedule. Batch production also sits at a coarser time granularity than price signals and renewable output, limiting the precision of demand response. The study therefore proposes a multi-objective scheduling framework that integrates renewable generation and energy storage into the steel plant.</p>
-<p><strong>Research highlights</strong></p>
-<ul class="plain-list">
-  <li><strong>Highlight 1: an extended RTN multi-objective MILP model that brings carbon emissions into scheduling.</strong> Electricity consumption and indirect carbon emissions are embedded together in the RTN framework, giving a multi-objective mixed-integer linear programming (MO-MILP) model whose objectives cover electricity cost, indirect emissions and adaptation to varying PTR, subject to process constraints such as heat precedence and continuous casting so that the resulting schedules remain feasible.</li>
-  <li><strong>Highlight 2: what-if analysis and the normal boundary intersection method give every make-span a choice of optima.</strong> Treating PTR as an external factor that directly shapes the make-span turns the problem into one of selecting Pareto-optimal solutions across make-span scenarios. A what-if strategy first fixes a set of representative make-spans, then the normal boundary intersection (NBI) method generates evenly distributed Pareto-optimal solutions for each, allowing the plant to choose a cost&ndash;emissions balance that matches the actual processing time requirement.</li>
-  <li><strong>Highlight 3: energy storage removes the time-granularity bottleneck of batch production.</strong> A battery energy storage system (BESS) is integrated into the demand response model, charging at renewable output peaks and discharging at price peaks, which refines power adjustment and raises renewable self-consumption while lowering cost and emissions.</li>
-</ul>
-<p><strong>Results and analysis:</strong> Case studies built on actual UK electricity prices and renewable output compare the most relaxed and the tightest processing time requirements and locate the corresponding solutions on the Pareto front. Combined electricity and emission costs fall by up to 68.5%, indirect carbon emissions by 83.5%, and renewable self-consumption rises by 12.1%. The what-if framework lets schedules adapt to different make-span requirements, while storage overcomes the coarse time granularity of batch production.</p>
-<p><strong>Conclusions:</strong> The difficulty in multi-objective steelmaking scheduling is not simply that carbon emissions have been added to the objective set: varying make-span requirements make any single-make-span schedule inadequate, so a set of Pareto-optimal options across scenarios is needed, and storage compensates for the limited temporal resolution of batch production. Further work can address uncertainties such as equipment failures and order changes through robust scheduling, and examine strategies for ancillary service market participation and the effect of coordinating multiple steel plants on regional grids.</p>
-<figure class="research-figure">
+  <figcaption>Research framework: assets and data &rarr; modelling and optimisation &rarr; objectives and services, with an assessment and deployment feedback loop.</figcaption>
+</figure><figure class="research-figure">
   <a class="research-figure__zoom" href="../../assets/images/research/research-steelmaking-en.svg" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/research-steelmaking-en.svg" alt="Mechanism-based multi-objective day-ahead scheduling and an illustrative 24-hour schedule">
+    <img loading="lazy" src="../../assets/images/research/research-steelmaking-en.svg" alt="Mechanism-based multi-objective day-ahead scheduling and an illustrative 24-hour schedule">
   </a>
   <figcaption>Figure 2. Inputs &rarr; mechanism model and multi-objective optimisation &rarr; day-ahead schedule and digital-twin validation; the lower panel shows an illustrative 24-hour schedule with shiftable tasks.</figcaption>
-</figure>
-</div>
-
-<div class="research-block">
-<h3>Direction 2 &middot; Industrial Load Flexibility and Demand Response</h3>
-<p>Corresponds to the MC2 work on assessing industrial load flexibility and its potential to provide demand response services. Shiftable or interruptible process tasks, on-site generation and storage are characterised by adjustable capacity, response time and duration; the resulting flexibility region supports demand response strategy modelling and an assessment of grid services under production cost and process safety constraints. A representative study in hydrogen-based steelmaking develops this direction further.</p>
-<p><strong>Citation:</strong> Su P, Zhou Y*, Li H, Perez HD, Wu J. Cost-effective scheduling of a hydrogen-based iron and steel plant powered by a grid-assisted renewable energy system. <em>Applied Energy</em>, 2025, 384: 125412. DOI: 10.1016/j.apenergy.2025.125412.</p>
-<p><strong>Introduction:</strong> Steelmaking contributes about 25% of global industrial CO<sub>2</sub> emissions. Hydrogen-based direct reduction coupled with an electric arc furnace (H<sub>2</sub>-DRI-EAF) is widely regarded as one of the most promising deep-decarbonisation routes and its technical feasibility has been demonstrated by leading projects, yet high electricity costs for water electrolysis dominate operating cost and remain the main barrier to commercial viability. What is missing is a short-term scheduling method that satisfies operating constraints and optimises cost at the same time. Four tightly coupled subprocesses &mdash; electrolysis, hydrogen storage and release, shaft-furnace direct reduction and EAF steelmaking &mdash; have very different operating characteristics; process simulators such as HYSYS and Aspen Plus handle parameter optimisation well but struggle with task dependencies, so economic assessments that omit short-term constraints can produce infeasible schedules; and time-varying local renewable output and electricity prices demand a dynamic response. The study addresses these challenges with an integrated RTN modelling framework.</p>
-<p><strong>Research highlights</strong></p>
-<ul class="plain-list">
-  <li><strong>Highlight 1: separate RTN models for each subprocess, integrated through boundary dependency constraints.</strong> Electrolysis, hydrogen storage, direct reduction and EAF steelmaking are modelled individually to capture internal resource balances, task execution and unit constraints, then linked by boundary dependency constraints, preserving modelling accuracy without sacrificing computational efficiency.</li>
-  <li><strong>Highlight 2: all key operating constraints are retained, so an optimal schedule is also a feasible one.</strong> Resource balances for hydrogen, direct reduced iron (DRI) and electricity, task start-up sequences and durations, and material transfer times are all included in the optimisation model, avoiding the infeasibility that arises when short-term operating constraints are neglected.</li>
-  <li><strong>Highlight 3: coordinated optimisation of a grid-assisted renewable supply lets hydrogen production follow the wind.</strong> Supplied jointly by local wind and the grid, the plant is scheduled against wind variability, time-of-use prices and grid carbon intensity: task timing, power levels and grid purchases are optimised so that electrolysis shifts from a fixed to a flexible load, while hydrogen storage decouples production from consumption over time.</li>
-</ul>
-<p><strong>Results and analysis:</strong> Numerical experiments show that the proposed method substantially reduces total operating cost relative to conventional scheduling across production scales. Hydrogen production responds dynamically to renewable output and price signals, and storage decouples production from consumption; operating cost falls without additional equipment investment, turning the flexibility quantified in this direction directly into an economic benefit.</p>
-<p><strong>Conclusions:</strong> The economic viability of hydrogen-based steelmaking depends not only on technological progress and capital investment: scheduling optimisation can lower cost significantly without new equipment, and the integrated RTN framework offers a transferable modelling paradigm for deeply coupled industrial processes. Further work can address participation in energy and ancillary service markets, coordination of multiple hydrogen-based plants with regional grids, and the influence of equipment ageing and maintenance planning on long-term operating economics.</p>
-<figure class="research-figure">
+</figure><figure class="research-figure">
   <a class="research-figure__zoom" href="../../assets/images/research/research-flexibility-en.svg" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/research-flexibility-en.svg" alt="Technical route from industrial load flexibility quantification to demand response services">
+    <img loading="lazy" src="../../assets/images/research/research-flexibility-en.svg" alt="Technical route from industrial load flexibility quantification to demand response services">
   </a>
   <figcaption>Figure 3. Flexible resources &rarr; flexibility quantification (capacity / response time / duration) &rarr; demand response strategies and grid flexibility services; constraints and service outcomes feed back into the assessment.</figcaption>
-</figure>
-</div>
-
-<div class="research-block">
-<h3>Direction 3 &middot; Hybrid Storage and Multi-energy Coordination</h3>
-<p>Corresponds to the FlexCHESS and MC2 projects. The work studies hybrid energy storage systems that combine industrial process flexibility with interconnected heterogeneous storage, and uses energy management and district-level coordinated control to dispatch power and energy across supply, storage and demand (industrial processes and urban energy systems) towards net-zero power systems.</p>
-<figure class="research-figure">
+</figure><figure class="research-figure">
   <a class="research-figure__zoom" href="../../assets/images/research/research-hybrid-en.svg" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/research-hybrid-en.svg" alt="Hybrid energy storage and multi-energy coordination framework">
+    <img loading="lazy" src="../../assets/images/research/research-hybrid-en.svg" alt="Hybrid energy storage and multi-energy coordination framework">
   </a>
   <figcaption>Figure 4. Supply, storage and demand coupled through a coordination layer towards net-zero power systems; project acronyms in brackets are those listed in the CV.</figcaption>
 </figure>
-</div>
+</details>
+<h2 id="selected-studies">Selected studies</h2>
+<p class="page-note">Each study starts with its question and approach. Expand for the existing case-study results and figures; reported gains depend on the equipment configuration and comparison baseline.</p>
+<section class="research-study"><h3>Low-carbon steelmaking transition planning</h3><p>How should investment cost and decarbonisation be balanced? Annual investment and representative hourly operation are co-optimised to compare EAF-only and EAF+DRI pathways.</p><details class="research-details"><summary>Case-study results and figures</summary>
 
-  <h2 id="selected-studies">Selected Studies</h2>
-  <p>Coordinated decarbonisation of steelmaking and power systems requires both planning and scheduling decisions: annual investment in low-carbon transition pathways, and hourly or batch-level operation of electric arc furnaces, electrolysers and storage. The three studies below address transition planning, multi-objective EAF scheduling, and hydrogen-based steelmaking coordination.</p>
 
-<div class="research-block">
-<h3>System under Study &middot; A Low-carbon Steel Plant with Multiple Decarbonisation Options</h3>
-<p>The object is an EAF-based steel plant supplied by the grid, renewables, storage, natural gas, hydrogen and scrap, whose energy and material flows are coordinated under cost and emission constraints.</p>
-<figure class="research-figure research-figure--detail">
-  <a class="research-figure__zoom" href="../../assets/images/research/steel-plant-options.png" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/steel-plant-options.png" alt="Low-carbon steel plant integrating grid, renewables, storage, gas, hydrogen and scrap">
-  </a>
-  <figcaption>Figure 5. Energy and material flows of a low-carbon steel plant integrating the grid, renewables, storage, natural gas, hydrogen and scrap.</figcaption>
-</figure>
-</div>
-
-<div class="research-block">
-<h3>Study 1 &middot; Low-carbon Steelmaking Transition Planning</h3>
 <p>Annual investment decisions and representative hourly operation are co-optimised under regional energy constraints, with a GDP formulation linking investment and operation and joint clustering yielding eight representative scenarios. Pathway choice balances cost against emissions: relative to the EAF-only route, EAF+DRI raises the discounted total cost by 18.1% while cutting cumulative operational emissions by 41.0%. A further 30% reduction in hydrogen prices from 2033 advances full-H<sub>2</sub> adoption from 2048 to 2040.</p>
 <figure class="research-figure research-figure--detail">
   <a class="research-figure__zoom" href="../../assets/images/research/study1-pathways.png" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/study1-pathways.png" alt="Technology pathways for EAF-only and EAF+DRI routes, 2025-2050">
+    <img loading="lazy" src="../../assets/images/research/study1-pathways.png" alt="Technology pathways for EAF-only and EAF+DRI routes, 2025-2050">
   </a>
-  <figcaption>Figure 6. Transition pathways under the baseline hydrogen price (EAF-only and EAF+DRI routes).</figcaption>
+  <figcaption>Transition pathways under the baseline hydrogen price (EAF-only and EAF+DRI routes).</figcaption>
 </figure>
 <figure class="research-figure research-figure--detail">
   <a class="research-figure__zoom" href="../../assets/images/research/study1-lcos.png" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/study1-lcos.png" alt="Levelised cost of steel versus scrap price and carbon tax for two routes">
+    <img loading="lazy" src="../../assets/images/research/study1-lcos.png" alt="Levelised cost of steel versus scrap price and carbon tax for two routes">
   </a>
-  <figcaption>Figure 7. Levelised cost of steel (LCOS) versus scrap price and carbon tax.</figcaption>
+  <figcaption>Levelised cost of steel (LCOS) versus scrap price and carbon tax.</figcaption>
 </figure>
-</div>
 
-<div class="research-block">
-<h3>Study 2 &middot; Multi-objective EAF Scheduling</h3>
+</details>
+</section>
+<section class="research-study"><h3>Multi-objective EAF scheduling</h3><p>How can production time, electricity cost and indirect emissions be balanced? An extended RTN and multi-objective optimisation assess scheduling with renewable generation and battery storage.</p><p class="research-citation"> Su P, Zhou Y*, Wu J. Multi-objective scheduling of a steelmaking plant integrated with renewable energy sources and energy storage systems: Balancing costs, emissions and make-span. <em>Journal of Cleaner Production</em>, 2023, 428: 139350. <a href="https://doi.org/10.1016/j.jclepro.2023.139350">DOI ↗</a></p><details class="research-details"><summary>Case-study results and figures</summary>
+
+
 <p>An extended resource&ndash;task network (RTN) is built for the EAF&ndash;AOD&ndash;LF&ndash;CC route, integrating production, electricity-use and indirect-emission constraints, and a normal boundary intersection (NBI) method generates the cost&ndash;makespan Pareto set. In a case with 10 MW PV, 10 MW wind and 5 MW / 20 MWh battery storage, a 1430 min joint schedule reduces electricity and emission costs by 68.5% and indirect emissions by 83.5% relative to a fixed 785 min schedule. Longer makespans unlock flexibility, and storage reduces costs further.</p>
 <figure class="research-figure research-figure--detail">
   <a class="research-figure__zoom" href="../../assets/images/research/study2-rtn.png" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/study2-rtn.png" alt="Extended resource-task network for EAF steelmaking with continuous and discrete interactions">
+    <img loading="lazy" src="../../assets/images/research/study2-rtn.png" alt="Extended resource-task network for EAF steelmaking with continuous and discrete interactions">
   </a>
-  <figcaption>Figure 8. Extended resource-task network (RTN) for EAF steelmaking, with continuous and discrete interactions.</figcaption>
+  <figcaption>Extended resource-task network (RTN) for EAF steelmaking, with continuous and discrete interactions.</figcaption>
 </figure>
 <figure class="research-figure research-figure--detail">
   <a class="research-figure__zoom" href="../../assets/images/research/study2-pareto.png" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/study2-pareto.png" alt="Cost-makespan Pareto fronts for MO-FlexSP and MO-FlexSP+BESS">
+    <img loading="lazy" src="../../assets/images/research/study2-pareto.png" alt="Cost-makespan Pareto fronts for MO-FlexSP and MO-FlexSP+BESS">
   </a>
-  <figcaption>Figure 9. Cost-makespan Pareto fronts: MO-FlexSP and MO-FlexSP+BESS with integrated storage.</figcaption>
+  <figcaption>Cost-makespan Pareto fronts: MO-FlexSP and MO-FlexSP+BESS with integrated storage.</figcaption>
 </figure>
-</div>
 
-<div class="research-block">
-<h3>Study 3 &middot; Hydrogen-based Steelmaking Coordination</h3>
+</details>
+</section>
+<section class="research-study"><h3>Hydrogen-based steelmaking coordination</h3><p>How can operating economics improve with existing equipment? Separate RTN models of electrolysis, hydrogen storage, direct reduction and EAF operation are integrated through boundary dependency constraints.</p><p class="research-citation"> Su P, Zhou Y*, Li H, Perez HD, Wu J. Cost-effective scheduling of a hydrogen-based iron and steel plant powered by a grid-assisted renewable energy system. <em>Applied Energy</em>, 2025, 384: 125412. <a href="https://doi.org/10.1016/j.apenergy.2025.125412">DOI ↗</a></p><details class="research-details"><summary>Case-study results and figures</summary>
+
+
 <p>Electrolysis, hydrogen storage, direct reduction and EAF operations are modelled together, with RTN and boundary-dependence constraints ensuring the feasibility of a six-batch production schedule. Electrolyser power adjustment complements EAF batch shifting, while the hydrogen tank buffers day-ahead price and wind variability. Under the cost-minimising schedule, total operating cost falls from 533.8 k&pound; to 221.1 k&pound; (58.58%), including power purchases, curtailment penalties and indirect emissions.</p>
 <figure class="research-figure research-figure--detail">
   <a class="research-figure__zoom" href="../../assets/images/research/study3-flow.png" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/study3-flow.png" alt="Hydrogen-based steelmaking process and energy flows">
+    <img loading="lazy" src="../../assets/images/research/study3-flow.png" alt="Hydrogen-based steelmaking process and energy flows">
   </a>
-  <figcaption>Figure 10. Hydrogen-based steelmaking: wind and grid power, electrolyser, hydrogen storage, shaft furnace, DRI and EAF.</figcaption>
+  <figcaption>Hydrogen-based steelmaking: wind and grid power, electrolyser, hydrogen storage, shaft furnace, DRI and EAF.</figcaption>
 </figure>
 <figure class="research-figure research-figure--detail">
   <a class="research-figure__zoom" href="../../assets/images/research/study3-schedules.png" target="_blank" rel="noopener">
-    <img src="../../assets/images/research/study3-schedules.png" alt="Day-ahead price and wind forecast, PEMEL and EAF power, and hydrogen storage state">
+    <img loading="lazy" src="../../assets/images/research/study3-schedules.png" alt="Day-ahead price and wind forecast, PEMEL and EAF power, and hydrogen storage state">
   </a>
-  <figcaption>Figure 11. Day-ahead electricity price and wind forecast, PEMEL/EAF power profiles, and hydrogen storage state under the cost-minimising schedule.</figcaption>
+  <figcaption>Day-ahead electricity price and wind forecast, PEMEL/EAF power profiles, and hydrogen storage state under the cost-minimising schedule.</figcaption>
 </figure>
-</div>
 
+</details>
+</section>
+<details class="research-details"><summary>System context: energy and material flows</summary>
+<figure class="research-figure research-figure--detail">
+  <a class="research-figure__zoom" href="../../assets/images/research/steel-plant-options.png" target="_blank" rel="noopener">
+    <img loading="lazy" src="../../assets/images/research/steel-plant-options.png" alt="Low-carbon steel plant integrating grid, renewables, storage, gas, hydrogen and scrap">
+  </a>
+  <figcaption>Energy and material flows of a low-carbon steel plant integrating the grid, renewables, storage, natural gas, hydrogen and scrap.</figcaption>
+</figure>
+</details>
   <h2 id="projects">Research Projects</h2>
 <div class="project-block">
 <h3>SUSTAIN Manufacturing Hub</h3>
@@ -223,30 +184,7 @@
 <p>Responsible for assessing industrial load flexibility and its potential to provide demand response services. Developed a digital-twin method for intelligent, flexible steel plant operation in collaboration with SUSTAIN.
  <a href="https://gtr.ukri.org/projects?ref=EP%2FT021969%2F1#/tabOverview">Project link</a>
 </p></div>
-  <h2 id="methods">Methods and Technical Areas</h2>
-<h3>Modelling and Optimisation</h3>
-<ul class="plain-list">
-  <li>Multi-objective scheduling</li>
-  <li>Industrial load flexibility assessment</li>
-  <li>Demand response modelling</li>
-  <li>Energy management algorithms</li>
-  <li>Digital-twin methods</li>
-</ul>
-<h3>Systems and Technologies</h3>
-<ul class="plain-list">
-  <li>Steelmaking process modelling and scheduling</li>
-  <li>Hybrid energy storage systems</li>
-  <li>Renewable energy and storage coordination</li>
-  <li>Urban multi-energy systems</li>
-  <li>Net-zero power systems</li>
-</ul>
-<h3>Collaborative Research</h3>
-<ul class="plain-list">
-  <li>EPSRC sub-project leadership</li>
-  <li>EU Horizon Europe</li>
-  <li>UK&ndash;China joint research programmes</li>
-  <li>Industry&ndash;academia deployment</li>
-</ul>
+<h2 id="methods">Methods</h2><ul class="research-methods"><li>Resource–task networks (RTN) and process-constraint modelling</li><li>Multi-objective optimisation and mixed-integer linear programming (MILP)</li><li>Industrial flexibility assessment and demand response</li><li>Energy management, hybrid storage and digital twins</li></ul><p><a href="../publications/index.html">Full publication list →</a></p>
 </div>
 </div>
 <div class="page__footer">
