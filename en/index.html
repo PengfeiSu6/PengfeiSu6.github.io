@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
 <body data-home="index.html">
+<a class="skip-link" href="#content">Skip to content</a>
 <!-- academicpages layout: masthead (real page links) + #main (sticky sidebar + archive) + page__footer
      Shared identity fields live in data/profile.js (SITE_PROFILE_EN). -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="Navigation menu"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="index.html" data-field="name">Pengfei Su</a></li>
           <li class="masthead__menu-item"><a href="publications/index.html">Publications</a></li>
@@ -69,20 +70,24 @@
     </div>
   </div>
 </div>
-<div class="archive">
+<div class="archive organized-page" id="content" tabindex="-1">
   <h1 class="page__title">Home Page - Pengfei Su</h1>
   <p>Pengfei Su is a Postdoctoral Fellow at Great Bay University and the Research Institute of Tsinghua University in Shenzhen (since September 2025). He received his Ph.D. in Electrical Engineering from Cardiff University, UK (March 2021 &ndash; June 2025), supervised by Yue Zhou, Jianzhong Wu and Meysam Qadrdan. Previously he earned an M.Sc. in Electrical Engineering from Tianjin University and a B.Eng. in Electrical Engineering and Automation from Northeast Electric Power University, and worked as an Electrical Engineer at Sungrow Power Supply Co., Ltd.</p>
   <p>His research focuses on the coordinated optimisation of industrial process flexibility and low-carbon power systems, including multi-objective scheduling of steelmaking processes, industrial load flexibility assessment and demand response, hybrid energy storage systems, and multi-energy coordination for net-zero power systems. He leads one sub-project of a UK Engineering and Physical Sciences Research Council (EPSRC) grant and has contributed as a key researcher to three major projects, including the EU Horizon Europe programme and an NSFC&ndash;EPSRC international collaboration.</p>
   <p>He has authored more than 10 SCI/EI-indexed papers and filed 9 Chinese invention patents, of which 3 have been granted. He serves as a guest editor for special issues of <em>Electronics</em> and <em>Electric Power</em>, and as a reviewer for <em>Applied Energy</em>, <em>Journal of Cleaner Production</em>, <em>Energy</em> and other journals.</p>
-  <p>Contact: aca_spf@163.com</p>
+  <p class="contact-line">Contact: <a href="mailto:aca_spf@163.com" data-href="emailHref">aca_spf@163.com</a></p>
+  <nav class="section-nav" aria-label="Explore"><a href="research/index.html">Research</a><a href="publications/index.html">Publications</a><a href="#news">News</a></nav>
   <hr />
-  <h1 id="news">News</h1>
+  <h2 id="news">Latest updates</h2>
   <ul class="news-list">
     <li><p><strong>[Call for Papers]</strong> Guest editor of the <em>Electronics</em> Special Issue &ldquo;AI-Enabled Demand-Side Flexibility: Forecasting, Coordination and Market Participation&rdquo; (<a href="https://www.mdpi.com/journal/electronics/special_issues/10xf9x2i27" target="_blank" rel="noopener">call for papers</a>; deadline 15 July 2027).</p></li>
     <li><p><strong>[Call for Papers]</strong> Guest editor of the <em>Electric Power</em> special column &ldquo;Key Technologies for Adjustable Capability and Interaction of Diverse Loads for Safe and Stable Operation of New-Type Power Systems&rdquo; (<a href="https://www.electricpower.com.cn/news/368" target="_blank" rel="noopener">call for papers</a>; deadline 31 December 2026).</p></li>
     <li><p><strong>[Accepted]</strong> Our paper &ldquo;<strong>Decarbonisation Pathways for a Steel Plant within an Evolving Hydrogen Driven Regional Energy System</strong>&rdquo; has been accepted by <em>Energy Conversion and Management</em>.</p></li>
     <li><p><strong>[2026-09-18]</strong> Chinese invention patent &ldquo;Method, Apparatus and Program Product for Optimising Steelmaking Production Scheduling&rdquo; filed (Chen Ge, Pengfei Su, Deng Haoran).</p></li>
     <li><p><strong>[2026]</strong> Received the Outstanding Organisation Award at IEEE I&amp;CPS Asia 2026 and the Best Reviewer Award at ICSCGE 2026.</p></li>
+  </ul>
+  <details class="news-archive"><summary>Earlier updates</summary>
+  <ul class="news-list">
     <li><p><strong>[2025-09]</strong> Joined Great Bay University and the Research Institute of Tsinghua University in Shenzhen as a Postdoctoral Fellow.</p></li>
     <li><p><strong>[2025-04]</strong> Paper &ldquo;<strong>Cost-Effective Scheduling of a Hydrogen-based Iron and Steel Plant Powered by a Grid-assisted Renewable Energy System</strong>&rdquo; published in <em>Applied Energy</em>, vol. 384, article 125412.</p></li>
     <li><p><strong>[2024]</strong> Received the Best Poster Award at the Sustainability in Steel SUSTAIN Conference.</p></li>
@@ -94,6 +99,7 @@
     <li><p><strong>[2023]</strong> Conference paper &ldquo;<strong>Optimal Scheduling of Steelmaking Process Considering Multiple Electricity Bill Components</strong>&rdquo; presented orally at IEEE EI&sup2;.</p></li>
     <li><p><strong>[2021-03]</strong> Started a Ph.D. in Electrical Engineering at Cardiff University, supported by a China Scholarship Council (CSC) scholarship.</p></li>
   </ul>
+  </details>
   <p class="page-note">Selected papers, patents and awards are listed above. For the complete list see the <a href="publications/index.html">Publications</a> page.</p>
 </div>
 </div>
