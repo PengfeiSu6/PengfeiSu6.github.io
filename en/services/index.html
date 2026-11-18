@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="../../assets/css/custom.css">
 </head>
 <body data-home="../index.html">
+<a class="skip-link" href="#content">Skip to content</a>
 <!-- academicpages layout: masthead (real page links) + #main (sticky sidebar + archive) + page__footer
      Shared identity fields live in data/profile.js (SITE_PROFILE_EN). -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="Navigation menu"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html" data-field="name">Pengfei Su</a></li>
           <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
@@ -69,8 +70,9 @@
     </div>
   </div>
 </div>
-<div class="archive">
+<div class="archive organized-page" id="content" tabindex="-1">
   <h1 class="page__title">Services</h1>
+  <nav class="section-nav" aria-label="On this page"><a href="#memberships">Memberships</a><a href="#editorial">Editorial roles</a><a href="#conferences">Conferences</a><a href="#reviewing">Peer review</a></nav>
   <h2 id="academic-services">Academic Services</h2>
   <h3 id="memberships">Professional Memberships</h3>
   <ul class="plain-list">
