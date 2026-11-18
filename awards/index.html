@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
 <body data-home="../index.html">
+<a class="skip-link" href="#content">跳转到正文</a>
 <!-- 结构：masthead（真实页面导航） + #main（sticky sidebar + archive） + page__footer
-     内容填充位置：下方 <div class="archive"> 内部；共享身份字段见 data/profile.js -->
+     内容填充位置：下方 <div class="archive organized-page" id="content" tabindex="-1"> 内部；共享身份字段见 data/profile.js -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="导航菜单"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html" data-field="name">苏鹏飞</a></li>
           <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
@@ -69,10 +70,10 @@
     </div>
   </div>
 </div>
-<div class="archive">
+<div class="archive organized-page" id="content" tabindex="-1">
   <h1 class="page__title">Awards</h1>
   <h2 id="awards">荣誉奖项</h2>
-  <ul class="plain-list">
+  <ul class="plain-list award-timeline">
     <li><strong>[2026]</strong> IEEE I&amp;CPS Asia 2026 杰出组织奖</li>
     <li><strong>[2026]</strong> ICSCGE 2026 最佳审稿人</li>
     <li><strong>[2024]</strong> Sustainability in Steel SUSTAIN Conference 最佳海报奖</li>
