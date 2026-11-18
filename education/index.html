@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
 <body data-home="../index.html">
+<a class="skip-link" href="#content">跳转到正文</a>
 <!-- 结构：masthead（真实页面导航） + #main（sticky sidebar + archive） + page__footer
-     内容填充位置：下方 <div class="archive"> 内部；共享身份字段见 data/profile.js -->
+     内容填充位置：下方 <div class="archive organized-page" id="content" tabindex="-1"> 内部；共享身份字段见 data/profile.js -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="导航菜单"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html" data-field="name">苏鹏飞</a></li>
           <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
@@ -69,28 +70,29 @@
     </div>
   </div>
 </div>
-<div class="archive">
+<div class="archive organized-page" id="content" tabindex="-1">
   <h1 class="page__title">Education</h1>
+  <nav class="section-nav" aria-label="本页导航"><a href="#education">教育背景</a><a href="#work-experience">工作经历</a></nav>
   <h2 id="education">教育背景</h2>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>英国卡迪夫大学 · 电气工程 博士</h3>
-    <p class="entry-meta">2021.01 – 2025.06</p>
+    <p class="entry-meta">2021.03 – 2025.06</p>
     <p>导师：周越、吴建中、Meysam Qadrdan。</p>
   </div>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>天津大学 · 电气工程 硕士</h3>
     <p class="entry-meta">2017.09 – 2020.01</p>
   </div>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>东北电力大学 · 电气工程及其自动化 学士</h3>
     <p class="entry-meta">2013.09 – 2017.06</p>
   </div>
   <h2 id="work-experience">工作经历</h2>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>大湾区大学与清华大学深圳研究院博士后站 · 博士后</h3>
     <p class="entry-meta">2025.09 – 至今</p>
   </div>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>阳光电源股份有限公司 · 电气工程师</h3>
     <p class="entry-meta">2020.07 – 2021.01</p>
   </div>
