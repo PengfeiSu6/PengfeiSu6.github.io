@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="../../assets/css/custom.css">
 </head>
 <body data-home="../index.html">
+<a class="skip-link" href="#content">Skip to content</a>
 <!-- academicpages layout: masthead (real page links) + #main (sticky sidebar + archive) + page__footer
      Shared identity fields live in data/profile.js (SITE_PROFILE_EN). -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="Navigation menu"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html" data-field="name">Pengfei Su</a></li>
           <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
@@ -69,10 +70,10 @@
     </div>
   </div>
 </div>
-<div class="archive">
+<div class="archive organized-page" id="content" tabindex="-1">
   <h1 class="page__title">Awards</h1>
   <h2 id="awards">Awards and Honours</h2>
-  <ul class="plain-list">
+  <ul class="plain-list award-timeline">
     <li><strong>[2026]</strong> Outstanding Organisation Award, IEEE I&amp;CPS Asia 2026</li>
     <li><strong>[2026]</strong> Best Reviewer Award, ICSCGE 2026</li>
     <li><strong>[2024]</strong> Best Poster Award, Sustainability in Steel SUSTAIN Conference</li>
