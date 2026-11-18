@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
 <body data-home="../index.html">
+<a class="skip-link" href="#content">跳转到正文</a>
 <!-- 结构：masthead（真实页面导航） + #main（sticky sidebar + archive） + page__footer
-     内容填充位置：下方 <div class="archive"> 内部；共享身份字段见 data/profile.js -->
+     内容填充位置：下方 <div class="archive organized-page" id="content" tabindex="-1"> 内部；共享身份字段见 data/profile.js -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="导航菜单"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html" data-field="name">苏鹏飞</a></li>
           <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
@@ -69,8 +70,9 @@
     </div>
   </div>
 </div>
-<div class="archive">
+<div class="archive organized-page" id="content" tabindex="-1">
   <h1 class="page__title">Publications</h1>
+  <nav class="section-nav" aria-label="本页导航"><a href="#journal-papers">期刊论文</a><a href="#conference-papers">会议论文</a><a href="#patents">专利</a></nav>
   <h2 id="publications">论文与专利</h2>
   <h3 id="journal-papers">期刊论文</h3>
   <ol class="custom-counter">
