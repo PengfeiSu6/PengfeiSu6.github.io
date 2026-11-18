@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
 <body data-home="../index.html">
+<a class="skip-link" href="#content">跳转到正文</a>
 <!-- 结构：masthead（真实页面导航） + #main（sticky sidebar + archive） + page__footer
-     内容填充位置：下方 <div class="archive"> 内部；共享身份字段见 data/profile.js -->
+     内容填充位置：下方 <div class="archive organized-page" id="content" tabindex="-1"> 内部；共享身份字段见 data/profile.js -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="导航菜单"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html" data-field="name">苏鹏飞</a></li>
           <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
@@ -69,10 +70,10 @@
     </div>
   </div>
 </div>
-<div class="archive">
+<div class="archive organized-page" id="content" tabindex="-1">
   <h1 class="page__title">Contact</h1>
   <p>如需学术交流、项目合作或索取研究材料，可通过以下方式联系。</p>
-  <ul class="plain-list">
+  <ul class="plain-list contact-details">
     <li><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> 邮箱：<a href="mailto:aca_spf@163.com" data-href="emailHref">aca_spf@163.com</a></li>
     <li><i class="fas fa-fw fa-map-marker" aria-hidden="true"></i> 单位：大湾区大学与清华大学深圳研究院博士后站</li>
     <li><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> 身份：博士后（2025.09 至今）</li>
