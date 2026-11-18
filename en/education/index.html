@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="../../assets/css/custom.css">
 </head>
 <body data-home="../index.html">
+<a class="skip-link" href="#content">Skip to content</a>
 <!-- academicpages layout: masthead (real page links) + #main (sticky sidebar + archive) + page__footer
      Shared identity fields live in data/profile.js (SITE_PROFILE_EN). -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="Navigation menu"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html" data-field="name">Pengfei Su</a></li>
           <li class="masthead__menu-item"><a href="../publications/index.html">Publications</a></li>
@@ -69,28 +70,29 @@
     </div>
   </div>
 </div>
-<div class="archive">
+<div class="archive organized-page" id="content" tabindex="-1">
   <h1 class="page__title">Education</h1>
+  <nav class="section-nav" aria-label="On this page"><a href="#education">Education</a><a href="#work-experience">Experience</a></nav>
   <h2 id="education">Education</h2>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>Cardiff University, UK &middot; Ph.D. in Electrical Engineering</h3>
-    <p class="entry-meta">Jan 2021 &ndash; Jun 2025</p>
+    <p class="entry-meta">Mar 2021 &ndash; Jun 2025</p>
     <p>Supervisors: Yue Zhou, Jianzhong Wu, Meysam Qadrdan.</p>
   </div>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>Tianjin University &middot; M.Sc. in Electrical Engineering</h3>
     <p class="entry-meta">Sep 2017 &ndash; Jan 2020</p>
   </div>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>Northeast Electric Power University &middot; B.Eng. in Electrical Engineering and Automation</h3>
     <p class="entry-meta">Sep 2013 &ndash; Jun 2017</p>
   </div>
   <h2 id="work-experience">Professional Experience</h2>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>Great Bay University &amp; Research Institute of Tsinghua University in Shenzhen &middot; Postdoctoral Fellow</h3>
     <p class="entry-meta">Sep 2025 &ndash; Present</p>
   </div>
-  <div class="project-block">
+  <div class="project-block career-entry">
     <h3>Sungrow Power Supply Co., Ltd. &middot; Electrical Engineer</h3>
     <p class="entry-meta">Jul 2020 &ndash; Jan 2021</p>
   </div>
